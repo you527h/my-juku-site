@@ -1,28 +1,48 @@
 ---
 const siteTitle = "プロ講師専門塾";
+const siteDescription = "現役プロ講師による本気の個別指導。";
 ---
 
+<!DOCTYPE html>
 <html lang="ja">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{siteTitle}</title>
+    <meta name="description" content={siteDescription} />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
+    <header>
+      <h1>プロ講師専門塾</h1>
+      <p>現役プロ講師による、本気の個別指導</p>
+    </header>
+
     <main>
-      <h1>{siteTitle}</h1>
-      <p>
-        本物のプロ講師による指導で、志望校合格を本気で目指す塾です。
-      </p>
+      <section>
+        <h2>塾について</h2>
+        <p>
+          当塾は、指導経験豊富なプロ講師のみが在籍する個別指導塾です。
+          学力だけでなく、学習習慣そのものを改善します。
+        </p>
+      </section>
 
       <section>
-        <h2>この塾の特徴</h2>
+        <h2>指導方針</h2>
         <ul>
-          <li>全講師が指導経験豊富なプロ講師</li>
-          <li>数学を中心とした論理的で再現性のある指導</li>
-          <li>少人数・対面指導</li>
+          <li>完全個別カリキュラム</li>
+          <li>理解度重視の丁寧な指導</li>
+          <li>志望校・目標に直結する学習設計</li>
         </ul>
       </section>
+
+      <section>
+        <h2>対象学年</h2>
+        <p>中学生・高校生</p>
+      </section>
     </main>
+
+    <footer>
+      <p>© プロ講師専門塾</p>
+    </footer>
   </body>
 </html>
