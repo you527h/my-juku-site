@@ -1,8 +1,6 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  output: 'static',
-  build: {
-    outDir: 'dist'
-  }
+  site: 'https://you527h.github.io/my-juku-site/',
+  base: '/my-juku-site/',
 });
