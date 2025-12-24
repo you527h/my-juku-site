@@ -1,6 +1,5 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
 
 export default defineConfig({
-  site: 'https://you527h.github.io/my-juku-site/',
-  base: '/my-juku-site/',
+  base: "/my-juku-site/",
 });
