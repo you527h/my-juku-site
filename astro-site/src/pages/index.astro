@@ -1,54 +1,148 @@
 ---
-const siteTitle = "プロ講師専門塾";
-const siteDescription = "現役プロ講師による本気の個別指導。";
+/* ロジックなし。今は空でOK */
 ---
 
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="utf-8" />
-  <title>{siteTitle}</title>
-  <meta name="description" content={siteDescription} />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>プロ講師個別指導塾｜プロ塾</title>
+  </head>
 
-  <!-- Google Search Console verification -->
-
-
-<meta name="google-site-verification" content="LQXDQtZtyBke-6ZXuoRHNQTwFr8wOIsXgKiDjezvOlk" />
-
-</head>
   <body>
-    <header>
-      <h1>プロ講師専門塾</h1>
-      <p>現役プロ講師による、本気の個別指導</p>
+    <!-- ヘッダー -->
+    <header class="header">
+      <h1 class="logo">プロ塾</h1>
     </header>
 
-    <main>
-      <section>
-        <h2>塾について</h2>
-        <p>
-          当塾は、指導経験豊富なプロ講師のみが在籍する個別指導塾です。
-          学力だけでなく、学習習慣そのものを改善します。
-        </p>
-      </section>
+    <!-- ファーストビュー -->
+    <section class="hero">
+      <h2 class="hero-title">プロ講師による個別指導</h2>
+      <p class="hero-text">
+        数学・英語を中心に、一人ひとりに向き合う指導を行います。
+      </p>
+    </section>
 
-      <section>
-        <h2>指導方針</h2>
-        <ul>
-          <li>完全個別カリキュラム</li>
-          <li>理解度重視の丁寧な指導</li>
-          <li>志望校・目標に直結する学習設計</li>
-        </ul>
-      </section>
+    <!-- 塾の概要 -->
+    <section class="section">
+      <h3 class="section-title">この塾について</h3>
+      <p>
+        プロ塾は、指導経験のある講師が授業を担当する個別指導塾です。
+        考え方を重視した指導を行います。
+      </p>
+    </section>
 
-      <section>
-        <h2>対象学年</h2>
-        <p>中学生・高校生</p>
-      </section>
-    </main>
+    <!-- 指導対象 -->
+    <section class="section">
+      <h3 class="section-title">指導対象・形式</h3>
+      <ul>
+        <li>中学生・高校生</li>
+        <li>数学・英語</li>
+        <li>対面個別指導</li>
+      </ul>
+    </section>
 
-    <footer>
-      <p>© プロ講師専門塾</p>
+    <!-- 特徴 -->
+    <section class="section">
+      <h3 class="section-title">プロ塾の特徴</h3>
+      <ul>
+        <li>すべての授業をプロ講師が担当</li>
+        <li>数学・英語に特化</li>
+        <li>駅近の公共施設で受講可能</li>
+      </ul>
+    </section>
+
+    <!-- 問い合わせ -->
+    <section class="contact">
+      <p>受講のご相談はお気軽にお問い合わせください。</p>
+      <a href="#" class="contact-button">お問い合わせ</a>
+    </section>
+
+    <!-- フッター -->
+    <footer class="footer">
+      <p>© プロ塾</p>
     </footer>
   </body>
 </html>
+
+<style>
+  /* 共通設定 */
+  body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+    line-height: 1.6;
+    color: #333;
+  }
+
+  /* ヘッダー */
+  .header {
+    padding: 16px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .logo {
+    margin: 0;
+    font-size: 20px;
+  }
+
+  /* ファーストビュー */
+  .hero {
+    padding: 60px 20px;
+    background: #f5f5f5;
+    text-align: center;
+  }
+
+  .hero-title {
+    margin-bottom: 12px;
+    font-size: 28px;
+  }
+
+  /* セクション共通 */
+  .section {
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .section-title {
+    margin-bottom: 12px;
+    font-size: 22px;
+  }
+
+  /* 問い合わせ */
+  .contact {
+    padding: 40px 20px;
+    text-align: center;
+    background: #eee;
+  }
+
+  .contact-button {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 12px 24px;
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  /* フッター */
+  .footer {
+    padding: 16px;
+    text-align: center;
+    font-size: 14px;
+    background: #222;
+    color: #fff;
+  }
+
+  /* スマホ対応（レスポンシブ） */
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 22px;
+    }
+
+    .section-title {
+      font-size: 18px;
+    }
+  }
+</style>
