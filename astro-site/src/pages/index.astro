@@ -1,96 +1,183 @@
-<script>
-  const button = document.getElementById("menuButton");
-  const menu = document.getElementById("menu");
-
-  button.addEventListener("click", () => {
-    menu.classList.toggle("open");
-  });
-</script>
-
-
 <!DOCTYPE html>
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 検索結果に出るタイトル -->
     <title>プロ講師個別指導塾｜プロ塾</title>
-		<meta
-  	name="description"
-  	content="プロ講師による1：1の個別指導塾。高校受験・大学受験対象。対面指導で学習習慣の見直しから行います。"/>
+
+    <!-- 検索結果に出る説明文 -->
+    <meta
+      name="description"
+      content="プロ講師による数学・英語専門の個別指導塾。中学生・高校生対象。対面指導で学習習慣から改善します。"
+    />
+
+    <style>
+      /* ===== 共通 ===== */
+      body {
+        margin: 0;
+        font-family: system-ui, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        padding-top: 60px; /* ヘッダー固定分 */
+      }
+
+      /* ===== ヘッダー ===== */
+      .header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background: #c0c0c0;
+        border-bottom: 1px solid #ddd;
+        padding: 12px 20px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .logo {
+        margin: 0;
+        font-size: 20px;
+      }
+
+      /* ハンバーガー */
+      .menu-button {
+        width: 30px;
+        height: 22px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background: none;
+        border: none;
+        cursor: pointer;
+      }
+
+      .menu-button span {
+        height: 3px;
+        background: #333;
+        display: block;
+      }
+
+      /* メニュー */
+      .menu {
+        position: fixed;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        background: #fff;
+        border: 1px solid #ddd;
+        display: none;
+      }
+
+      .menu.open {
+        display: block;
+      }
+
+      .menu ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .menu li a {
+        display: block;
+        padding: 12px;
+        text-decoration: none;
+        color: #333;
+      }
+
+      .menu li a:hover {
+        background: #f5f5f5;
+      }
+
+      /* ===== ファーストビュー ===== */
+      .hero {
+        padding: 60px 20px;
+        background: #f5f5f5;
+        text-align: center;
+      }
+
+      .hero-title {
+        margin-bottom: 12px;
+        font-size: 28px;
+      }
+
+      /* ===== セクション ===== */
+      .section {
+        padding: 40px 20px;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .section-title {
+        margin-bottom: 12px;
+        font-size: 22px;
+      }
+
+      /* ===== 問い合わせ ===== */
+      .contact {
+        padding: 40px 20px;
+        text-align: center;
+        background: #eee;
+      }
+
+      .contact-button {
+        display: inline-block;
+        margin-top: 12px;
+        padding: 12px 24px;
+        background: #333;
+        color: #fff;
+        text-decoration: none;
+      }
+
+      /* ===== フッター ===== */
+      .footer {
+        padding: 16px;
+        text-align: center;
+        font-size: 14px;
+        background: #222;
+        color: #fff;
+      }
+
+      /* ===== レスポンシブ ===== */
+      @media (max-width: 768px) {
+        .hero-title {
+          font-size: 22px;
+        }
+        .section-title {
+          font-size: 18px;
+        }
+      }
+    </style>
   </head>
-
-/* ヘッダー内配置 */
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-/* ハンバーガーボタン */
-.menu-button {
-  width: 30px;
-  height: 22px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-.menu-button span {
-  display: block;
-  height: 3px;
-  background: #333;
-}
-
-/* メニュー本体 */
-.menu {
-  position: absolute;
-  top: 60px;
-  right: 0;
-  background: #fff;
-  width: 200px;
-  border: 1px solid #ddd;
-  display: none;
-}
-
-.menu ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.menu li a {
-  display: block;
-  padding: 12px;
-  text-decoration: none;
-  color: #333;
-}
-
-.menu li a:hover {
-  background: #f5f5f5;
-}
-
-/* 表示用クラス */
-.menu.open {
-  display: block;
-}
-
-
 
   <body>
     <!-- ヘッダー -->
     <header class="header">
       <h1 class="logo">プロ塾</h1>
+
+      <button class="menu-button" id="menuButton" aria-label="メニュー">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="menu" id="menu">
+        <ul>
+          <li><a href="/">トップ</a></li>
+          <li><a href="/about/">塾について</a></li>
+          <li><a href="/course/">講座・料金</a></li>
+          <li><a href="/contact/">お問い合わせ</a></li>
+        </ul>
+      </nav>
     </header>
 
     <!-- ファーストビュー -->
     <section class="hero">
       <h2 class="hero-title">プロ講師による個別指導</h2>
-      <p class="hero-text">
-        数学・英語を中心に、一人ひとりに向き合う指導を行います。
-      </p>
+      <p>数学・英語を中心に、一人ひとりに向き合う指導を行います。</p>
     </section>
 
     <!-- 塾の概要 -->
@@ -125,98 +212,22 @@
     <!-- 問い合わせ -->
     <section class="contact">
       <p>受講のご相談はお気軽にお問い合わせください。</p>
-      <a href="#" class="contact-button">お問い合わせ</a>
+      <a href="/contact/" class="contact-button">お問い合わせ</a>
     </section>
 
     <!-- フッター -->
     <footer class="footer">
       <p>© プロ塾</p>
     </footer>
+
+    <!-- JS（最後に置くのが重要） -->
+    <script>
+      const button = document.getElementById("menuButton");
+      const menu = document.getElementById("menu");
+
+      button.addEventListener("click", () => {
+        menu.classList.toggle("open");
+      });
+    </script>
   </body>
 </html>
-
-<style>
- /* 共通設定 */
-body{
-  margin:0;
-  font-family: system-ui, sans-serif;
-  line-height:1.6;
-  color:#333;
-  padding-top:60px; /* ヘッダー分の余白 */
-}
-
-  /* ヘッダー */
-.header{
-  position: sticky;
-  top: 0;
-  background: #c0c0c0;
-  z-index: 1000;
-  border-bottom: 1px solid #ddd;
-  padding: 12px 20px;
-}
-
-  .logo {
-    margin: 0;
-    font-size: 20px;
-  }
-
-  /* ファーストビュー */
-  .hero {
-    padding: 60px 20px;
-    background: #f5f5f5;
-    text-align: center;
-  }
-
-  .hero-title {
-    margin-bottom: 12px;
-    font-size: 28px;
-  }
-
-  /* セクション共通 */
-  .section {
-    padding: 40px 20px;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-
-  .section-title {
-    margin-bottom: 12px;
-    font-size: 22px;
-  }
-
-  /* 問い合わせ */
-  .contact {
-    padding: 40px 20px;
-    text-align: center;
-    background: #eee;
-  }
-
-  .contact-button {
-    display: inline-block;
-    margin-top: 12px;
-    padding: 12px 24px;
-    background: #333;
-    color: #fff;
-    text-decoration: none;
-  }
-
-  /* フッター */
-  .footer {
-    padding: 16px;
-    text-align: center;
-    font-size: 14px;
-    background: #222;
-    color: #fff;
-  }
-
-  /* スマホ対応（レスポンシブ） */
-  @media (max-width: 768px) {
-    .hero-title {
-      font-size: 22px;
-    }
-
-    .section-title {
-      font-size: 18px;
-    }
-  }
-</style>
