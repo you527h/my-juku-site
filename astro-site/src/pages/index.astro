@@ -1,6 +1,12 @@
-=---
-/* ロジックなし。今は空でOK */
----
+<script>
+  const button = document.getElementById("menuButton");
+  const menu = document.getElementById("menu");
+
+  button.addEventListener("click", () => {
+    menu.classList.toggle("open");
+  });
+</script>
+
 
 <!DOCTYPE html>
 <html lang="ja">
@@ -8,7 +14,70 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>プロ講師個別指導塾｜プロ塾</title>
+		<meta
+  	name="description"
+  	content="プロ講師による1：1の個別指導塾。高校受験・大学受験対象。対面指導で学習習慣の見直しから行います。"/>
   </head>
+
+/* ヘッダー内配置 */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ハンバーガーボタン */
+.menu-button {
+  width: 30px;
+  height: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-button span {
+  display: block;
+  height: 3px;
+  background: #333;
+}
+
+/* メニュー本体 */
+.menu {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background: #fff;
+  width: 200px;
+  border: 1px solid #ddd;
+  display: none;
+}
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li a {
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+  color: #333;
+}
+
+.menu li a:hover {
+  background: #f5f5f5;
+}
+
+/* 表示用クラス */
+.menu.open {
+  display: block;
+}
+
+
 
   <body>
     <!-- ヘッダー -->
