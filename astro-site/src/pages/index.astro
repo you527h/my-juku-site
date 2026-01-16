@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
@@ -10,7 +10,7 @@
     <!-- 検索結果に出る説明文 -->
     <meta
       name="description"
-      content="プロ講師による1：1の個別指導塾。高校受験・大学受験に対象。対面指導で学習習慣から改善します。"
+      content="プロ講師による1：1の個別指導塾。高校受験・大学受験に対応。対面指導で学習習慣から改善します。"
     />
 
     <style>
@@ -30,7 +30,6 @@
         z-index: 1000;
         background: #070054;
         border-bottom: 1px solid #ddd;
-        padding: 0px;
 
         display: flex;
         align-items: center;
@@ -43,11 +42,11 @@
         color: #ffffff;
       }
 
-      /* ハンバーガー */
+      /* ===== ハンバーガーボタン ===== */
       .menu-button {
         width: 40px;
         height: 40px;
-        padding: 8pt;
+        padding: 8px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -60,12 +59,27 @@
         height: 3px;
         width: 100%;
         background: #000;
+        border-radius: 2px;
+        transition: transform 0.3s ease, opacity 0.3s ease;
       }
 
-      /* メニュー */
+      /* ★ ここが「×」になるアニメーション */
+      .menu-button.open span:nth-child(1) {
+        transform: translateY(10px) rotate(45deg);
+      }
+
+      .menu-button.open span:nth-child(2) {
+        opacity: 0;
+      }
+
+      .menu-button.open span:nth-child(3) {
+        transform: translateY(-10px) rotate(-45deg);
+      }
+
+      /* ===== メニュー ===== */
       .menu {
         position: fixed;
-        top: 124px;
+        top: 60px;
         right: 0;
         width: 150px;
         background: #fff;
@@ -161,7 +175,7 @@
       <h1 class="logo">プロ塾</h1>
 
       <button class="menu-button" id="menuButton" aria-label="メニュー">
-				<span></span>
+        <span></span>
         <span></span>
         <span></span>
       </button>
@@ -222,13 +236,14 @@
       <p>© プロ塾</p>
     </footer>
 
-    <!-- JS（最後に置くのが重要） -->
+    <!-- ===== JS（必ず body の最後） ===== -->
     <script>
       const button = document.getElementById("menuButton");
       const menu = document.getElementById("menu");
 
       button.addEventListener("click", () => {
         menu.classList.toggle("open");
+        button.classList.toggle("open"); // ★ これが超重要
       });
     </script>
   </body>
