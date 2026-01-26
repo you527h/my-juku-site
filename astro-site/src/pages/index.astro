@@ -23,6 +23,55 @@
         padding-top: 60px; /* ヘッダー固定分 */
       }
 
+			/* ===== スライダー ===== */
+			.slider {
+  			position: relative;
+  			max-width: 100%;
+  			overflow: hidden;
+  			background: #eee;
+			}
+
+			.slider-track {
+  			display: flex;
+  			transition: transform 400ms ease;
+  			will-change: transform;
+			}
+
+			.slide {
+  			min-width: 100%;
+			}
+
+			.slide img {
+  			width: 100%;
+  			display: block;
+  			height: auto;
+			}
+
+			/* ドット */
+			.dots {
+  			position: absolute;
+  			left: 0;
+  			right: 0;
+  			bottom: 10px;
+  			display: flex;
+  			justify-content: center;
+  			gap: 8px;
+			}
+
+			.dot {
+  			width: 10px;
+  			height: 10px;
+  			border-radius: 999px;
+  			border: none;
+  			background: rgba(255, 255, 255, 0.6);
+  			cursor: pointer;
+			}
+
+			.dot.is-active {
+  			background: rgba(255, 255, 255, 1);
+			}
+
+
       /* ===== ヘッダー ===== */
       .header {
         position: sticky;
@@ -190,6 +239,27 @@
       </nav>
     </header>
 
+		<!-- スライダー -->
+		<section class="slider" aria-label="お知らせスライダー">
+  		<div class="slider-track" id="sliderTrack">
+   			<div class="slide is-active">
+      		<img src="/images/slide1.jpg" alt="スライド1">
+    		</div>
+    		<div class="slide">
+     	 	<img src="/images/slide2.jpg" alt="スライド2">
+    		</div>
+    		<div class="slide">
+      		<img src="/images/slide3.jpg" alt="スライド3">
+    		</div>
+  		</div>
+
+  			<div class="dots" id="sliderDots" aria-label="スライド切替">
+    			<button class="dot is-active" aria-label="1枚目へ"></button>
+    			<button class="dot" aria-label="2枚目へ"></button>
+    			<button class="dot" aria-label="3枚目へ"></button>
+  		</div>
+		</section>
+
     <!-- ファーストビュー -->
     <section class="hero">
       <h1 class="hero-title">プロ講師による1：1の完全個別指導</h>
@@ -253,6 +323,52 @@
         menu.classList.toggle("open");
         button.classList.toggle("open"); // ★ これが超重要
       });
+
+		// ===== スライダー =====
+			const track = document.getElementById("sliderTrack");
+			const dotsWrap = document.getElementById("sliderDots");
+			const dots = Array.from(dotsWrap.querySelectorAll(".dot"));
+
+			let current = 0;
+			const total = dots.length;
+			let timer = null;
+
+			function updateSlider(index) {
+  			current = index;
+  			track.style.transform = `translateX(-${current * 100}%)`;
+
+  			dots.forEach((d, i) => {
+    			d.classList.toggle("is-active", i === current);
+  			});
+			}
+
+			function next() {
+  			updateSlider((current + 1) % total);
+			}
+
+			function start() {
+  			stop();
+  			timer = setInterval(next, 3500); // 3.5秒ごと
+			}
+
+			function stop() {
+  			if (timer) clearInterval(timer);
+  			timer = null;
+			}
+
+			// ドットで移動
+			dots.forEach((dot, i) => {
+  			dot.addEventListener("click", () => {
+    			updateSlider(i);
+    			start(); // 触ったらタイマーリセット
+  			});
+			});
+
+			// 最初に起動
+			updateSlider(0);
+			start();
     </script>
+
+
   </body>
 </html>
