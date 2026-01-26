@@ -367,6 +367,80 @@
 			// 最初に起動
 			updateSlider(0);
 			start();
+
+
+			// ===== スワイプ対応（タッチで左右移動）=====
+			let startX = 0;
+			let startY = 0;
+			let deltaX = 0;
+			let isSwiping = false;
+
+			const slider = document.querySelector(".slider"); // スライダー全体
+
+			function onStart(x, y) {
+ 			 	startX = x;
+  			startY = y;
+  			deltaX = 0;
+  			isSwiping = true;
+  			stop(); // 触ったら自動送りを止める（誤爆防止）
+			}
+
+			function onMove(x, y) {
+  			if (!isSwiping) return;
+
+  			const dx = x - startX;
+  			const dy = y - startY;
+
+  			// 縦スクロールのほうが強いならスワイプ扱いしない
+  			if (Math.abs(dy) > Math.abs(dx)) return;
+
+				deltaX = dx;
+
+  			// 指に追従（ドラッグ中に動く）
+  			track.style.transition = "none";
+  			const percent = (deltaX / slider.clientWidth) * 100;
+  			track.style.transform = `translateX(calc(-${current * 100}% + ${percent}%))`;
+			}
+
+			function onEnd() {
+  			if (!isSwiping) return;
+  			isSwiping = false;
+
+  			// 通常のアニメーションに戻す
+  			track.style.transition = "transform 400ms ease";
+
+  			const threshold = slider.clientWidth * 0.2; // 20%動いたらスライド確定
+  			if (deltaX > threshold) {
+    			// 右へスワイプ → 前へ
+    			updateSlider((current - 1 + total) % total);
+  			} else if (deltaX < -threshold) {
+    			// 左へスワイプ → 次へ
+    			updateSlider((current + 1) % total);
+  			} else {
+    			// ちょい動き → 元に戻す
+    			updateSlider(current);
+  			}
+
+  			start(); // 自動送り再開
+			}
+
+			// タッチ
+			slider.addEventListener("touchstart", (e) => {
+  			const t = e.touches[0];
+  			onStart(t.clientX, t.clientY);
+			}, { passive: true });
+
+			slider.addEventListener("touchmove", (e) => {
+  			const t = e.touches[0];
+  			onMove(t.clientX, t.clientY);
+			}, { passive: true });
+
+			slider.addEventListener("touchend", onEnd);
+
+			// マウス（PCでもドラッグで動くようにしたい場合）
+			slider.addEventListener("mousedown", (e) => onStart(e.clientX, e.clientY));
+			window.addEventListener("mousemove", (e) => onMove(e.clientX, e.clientY));
+			window.addEventListener("mouseup", onEnd);
     </script>
 
 
