@@ -13,6 +13,11 @@
       content="プロ講師による1：1の個別指導塾。高校受験・大学受験に対応。対面指導で学習習慣から改善します。"
     />
 
+		<!-- 文字の書体を部分的に変更するもの -->
+			<link rel="preconnect" href="https://fonts.googleapis.com">
+			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+			<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+
     <style>
       /* ===== 共通 ===== */
       body {
@@ -215,13 +220,19 @@
           font-size: 18px;
         }
       }
+
+			/* ==== 文字の書体を部分的に変更 === */
+			.block-font {
+  			font-family: 'Anton', sans-serif;
+  			letter-spacing: 1px;
+			}
     </style>
   </head>
 
   <body>
     <!-- ヘッダー -->
     <header class="header">
-      <h1 class="logo">プロ塾</h1>
+      <h1 class="logo">プロ塾 <span class="block-font">プロ塾</span></h1> 
 
       <button class="menu-button" id="menuButton" aria-label="メニュー">
         <span></span>
