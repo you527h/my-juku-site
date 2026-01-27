@@ -88,7 +88,7 @@
         position: fixed;
         top: 0;
         width: 100%;
-        hight: 60px;
+        hight: 40px;
         z-index: 1000;
         background: #E7D0A9;
         border-bottom: 1px solid #ddd;
@@ -150,26 +150,26 @@
         transform: translateY(-10px) rotate(-45deg);
       }
 
-      /* ===== メニュー ===== */
+			/* メニュー本体：右半分 */
 			.menu {
   			position: fixed;
-        hight: 100%
-        width: 100%
-        top-margin: 60px;
-  			inset: 0;
-        z-index: 900;
-  			background: rgba(245,245,220);
-  			display: block;
-  			padding-top: 120px;
-        opacity: 0;
-			  pointer-events: none;
-  			transition: opacity 0.3s ease;
+  			top: 60px;            /* ヘッダー高さに合わせる（固定なら60px） */
+  			right: 0;
+  			width: 50vw;          /* 画面の右半分 */
+  			height: calc(100vh - 60px);
+
+  			background: rgba(245,245,220,0.98);
+
+  			/* 右に押し出して隠す */
+  			transform: translateX(100%);
+  			transition: transform 0.3s ease;
+
+  			z-index: 900;         /* ヘッダー(1000)より下、スライダーより上 */
 			}
 
+			/* 開いたとき：元の位置に戻す */
 			.menu.open {
-  			display: block;
-          opacity: 1;
-          pointer-events: auto;
+  			transform: translateX(0);
 			}
 
 			.menu ul {
@@ -284,7 +284,7 @@
         </ul>
       </nav>
     </header>
-
+		<div class="overlay" id="overlay"></div>
 		<!-- スライダー -->
 		<section class="slider" aria-label="お知らせスライダー">
   		<div class="slider-track" id="sliderTrack">
@@ -487,6 +487,23 @@
 			slider.addEventListener("mousedown", (e) => onStart(e.clientX, e.clientY));
 			window.addEventListener("mousemove", (e) => onMove(e.clientX, e.clientY));
 			window.addEventListener("mouseup", onEnd);
+
+			.overlay {
+  			position: fixed;
+  			inset: 60px 0 0 0;    /* ヘッダー下から全体 */
+  			background: rgba(0,0,0,0.35);
+
+			  opacity: 0;
+  			pointer-events: none;
+  			transition: opacity 0.3s ease;
+
+  			z-index: 800;         /* menu(900)より下 */
+			}
+
+			.overlay.open {
+  			opacity: 1;
+  			pointer-events: auto;
+  			}
     </script>
 
 
