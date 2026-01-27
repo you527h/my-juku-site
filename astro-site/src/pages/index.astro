@@ -1,24 +1,22 @@
----
-const BASE = import.meta.env.BASE_URL; // ローカル: "/" / 本番: "/my-juku-site/" など
-const withBase = (path) => `${BASE}${path.replace(/^\/+/, "")}`;
----
-
 <!DOCTYPE html>
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- 検索結果に出るタイトル -->
     <title>プロ講師個別指導塾｜プロ塾</title>
+
+    <!-- 検索結果に出る説明文 -->
     <meta
       name="description"
       content="プロ講師による1：1の個別指導塾。高校受験・大学受験に対応。対面指導で学習習慣から改善します。"
     />
 
-    <!-- フォント -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet" />
+		<!-- 文字の書体を部分的に変更するもの -->
+			<link rel="preconnect" href="https://fonts.googleapis.com">
+			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+			<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
 
     <style>
       /* ===== 共通 ===== */
@@ -30,12 +28,61 @@ const withBase = (path) => `${BASE}${path.replace(/^\/+/, "")}`;
         padding-top: 60px; /* ヘッダー固定分 */
       }
 
+			/* ===== スライダー ===== */
+			.slider {
+  			position: relative;
+  			max-width: 100%;
+  			overflow: hidden;
+  			background: #eee;
+			}
+
+			.slider-track {
+  			display: flex;
+  			transition: transform 400ms ease;
+  			will-change: transform;
+			}
+
+			.slide {
+  			min-width: 100%;
+			}
+
+			.slide img {
+  			width: 100%;
+  			display: block;
+  			height: auto;
+			}
+
+			/* ドット */
+			.dots {
+  			position: absolute;
+  			left: 0;
+  			right: 0;
+  			bottom: 10px;
+  			display: flex;
+  			justify-content: center;
+  			gap: 8px;
+			}
+
+			.dot {
+  			width: 10px;
+  			height: 10px;
+  			border-radius: 999px;
+  			border: none;
+  			background: rgba(255, 255, 255, 0.6);
+  			cursor: pointer;
+			}
+
+			.dot.is-active {
+  			background: rgba(255, 255, 255, 1);
+			}
+
+
       /* ===== ヘッダー ===== */
       .header {
         position: sticky;
         top: 0;
         z-index: 1000;
-        background: #e7d0a9;
+        background: #E7D0A9;
         border-bottom: 1px solid #ddd;
 
         display: flex;
@@ -45,21 +92,17 @@ const withBase = (path) => `${BASE}${path.replace(/^\/+/, "")}`;
 
       .logo {
         margin: 10px;
-        display: flex;
-        align-items: center;
-        gap: 10px;
+        font-size: 30px;
+        color: #000000;
       }
-
-      .logo img {
+			.logo img{
         height: 40px;
         width: auto;
         display: block;
       }
-
-      .logo-text {
-        color: #000;
-        font-size: 30px;
-        line-height: 1;
+			.logo-text{
+        color: #fff;
+        font-size: 30px  
       }
 
       /* ===== ハンバーガーボタン ===== */
@@ -83,13 +126,15 @@ const withBase = (path) => `${BASE}${path.replace(/^\/+/, "")}`;
         transition: transform 0.3s ease, opacity 0.3s ease;
       }
 
-      /* × に変わる */
+      /* ★ ここが「×」になるアニメーション */
       .menu-button.open span:nth-child(1) {
         transform: translateY(10px) rotate(45deg);
       }
+
       .menu-button.open span:nth-child(2) {
         opacity: 0;
       }
+
       .menu-button.open span:nth-child(3) {
         transform: translateY(-10px) rotate(-45deg);
       }
@@ -97,9 +142,9 @@ const withBase = (path) => `${BASE}${path.replace(/^\/+/, "")}`;
       /* ===== メニュー ===== */
       .menu {
         position: fixed;
-        top: 60px; /* ヘッダー直下に出す（124px固定より安全） */
+        top: 120px;
         right: 0;
-        width: 170px;
+        width: 150px;
         background: #fff;
         border: 1px solid #ddd;
         display: none;
@@ -126,62 +171,15 @@ const withBase = (path) => `${BASE}${path.replace(/^\/+/, "")}`;
         background: #f5f5f5;
       }
 
-      /* ===== スライダー ===== */
-      .slider {
-        position: relative;
-        max-width: 100%;
-        overflow: hidden;
-        background: #eee;
-      }
-
-      .slider-track {
-        display: flex;
-        transition: transform 400ms ease;
-        will-change: transform;
-      }
-
-      .slide {
-        min-width: 100%;
-      }
-
-      .slide img {
-        width: 100%;
-        display: block;
-        height: auto;
-      }
-
-      .dots {
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 10px;
-        display: flex;
-        justify-content: center;
-        gap: 8px;
-      }
-
-      .dot {
-        width: 10px;
-        height: 10px;
-        border-radius: 999px;
-        border: none;
-        background: rgba(255, 255, 255, 0.6);
-        cursor: pointer;
-      }
-
-      .dot.is-active {
-        background: rgba(255, 255, 255, 1);
-      }
-
       /* ===== ファーストビュー ===== */
       .hero {
         padding: 20px 20px;
-        background: #dddddd;
+        background: #DDDDDD;
         text-align: center;
       }
 
       .hero-title {
-        margin: 0;
+        margin-bottom: 12px;
         font-size: 28px;
       }
 
@@ -232,67 +230,70 @@ const withBase = (path) => `${BASE}${path.replace(/^\/+/, "")}`;
         }
       }
 
-      /* ==== 文字の書体を部分的に変更 ==== */
-      .block-font {
-        font-family: "Anton", sans-serif;
-        letter-spacing: 1px;
-      }
+			/* ==== 文字の書体を部分的に変更 === */
+			.block-font {
+  			font-family: 'Anton', sans-serif;
+  			letter-spacing: 1px;
+			}
+
+			.soft-font {
+  			font-family: 'Zen Maru Gothic', sans-serif;
+			}
+
     </style>
   </head>
 
   <body>
     <!-- ヘッダー -->
     <header class="header">
-      <h1 class="logo">
-        <img src={withBase("images/pic_01.JPG")} alt="プロ塾ロゴ" />
-        <span class="logo-text">プロ塾</span>
-      </h1>
+			<h1 class="logo"><img src="/images/pic_01.JPG"><span class="logo-text">プロ塾</span></h1> 
 
-      <button class="menu-button" id="menuButton" aria-label="メニュー" type="button">
-        <span></span><span></span><span></span>
+      <button class="menu-button" id="menuButton" aria-label="メニュー">
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
 
-      <nav class="menu" id="menu" aria-label="グローバルメニュー">
+      <nav class="menu" id="menu">
         <ul>
-          <li><a href={withBase("")}>トップ</a></li>
-          <li><a href={withBase("about/")}>塾について</a></li>
-          <li><a href={withBase("course/")}>講座・料金</a></li>
-          <li><a href={withBase("contact/")}>お問い合わせ</a></li>
+          <li><a href="/">トップ</a></li>
+          <li><a href="/about/">塾について</a></li>
+          <li><a href="/course/">講座・料金</a></li>
+          <li><a href="/contact/">お問い合わせ</a></li>
         </ul>
       </nav>
     </header>
 
-    <!-- スライダー -->
-    <section class="slider" aria-label="お知らせスライダー">
-      <div class="slider-track" id="sliderTrack">
-        <div class="slide">
-          <img src={withBase("images/pic_01.JPG")} alt="スライド1" />
-        </div>
-        <div class="slide">
-          <img src={withBase("images/pic_02.JPG")} alt="スライド2" />
-        </div>
-        <div class="slide">
-          <img src={withBase("images/slide3.jpg")} alt="スライド3" />
-        </div>
-      </div>
+		<!-- スライダー -->
+		<section class="slider" aria-label="お知らせスライダー">
+  		<div class="slider-track" id="sliderTrack">
+   			<div class="slide is-active">
+      		<img src="/images/pic_01.JPG" alt="スライド1">
+    		</div>
+    		<div class="slide">
+     	 	<img src="/images/pic_02.JPG" alt="スライド2">
+    		</div>
+    		<div class="slide">
+      		<img src="/images/pic_01.JPG" alt="スライド3">
+    		</div>
+  		</div>
 
-      <div class="dots" id="sliderDots" aria-label="スライド切替">
-        <button class="dot is-active" aria-label="1枚目へ" type="button"></button>
-        <button class="dot" aria-label="2枚目へ" type="button"></button>
-        <button class="dot" aria-label="3枚目へ" type="button"></button>
-      </div>
-    </section>
+  			<div class="dots" id="sliderDots" aria-label="スライド切替">
+    			<button class="dot is-active" aria-label="1枚目へ"></button>
+    			<button class="dot" aria-label="2枚目へ"></button>
+    			<button class="dot" aria-label="3枚目へ"></button>
+  		</div>
+		</section>
 
     <!-- ファーストビュー -->
     <section class="hero">
-      <!-- あなたのコードは </h> になってたので修正 -->
-      <h2 class="hero-title">プロ講師による1：1の完全個別指導</h2>
+      <h1 class="hero-title">プロ講師による1：1の完全個別指導</h>
     </section>
 
     <!-- 塾の概要 -->
     <section class="section">
       <h2 class="section-title">プロ塾について</h2>
-      <b>学習状態の徹底管理を行い、数学・英語を中心に一人ひとりに最適な指導をいたします。</b>
+			<b>学習状態の徹底管理を行い、数学・英語を中心に一人ひとりに最適な指導をいたします。</b>
       <p>
         プロ塾では、指導経験の豊富な講師が授業を担当する個別指導塾です。
         講師は担当の生徒が学習習慣を身につけるまで学習状態を徹底的に管理いたします。
@@ -301,7 +302,10 @@ const withBase = (path) => `${BASE}${path.replace(/^\/+/, "")}`;
 
     <section class="section">
       <h2 class="section-title">指導方針</h2>
-      <p>「正しく効率よく学習する」がコンセプトとなっています。</p>
+			<p>
+				「正しく効率よく学習する」がコンセプトとなっています。
+			</p>
+        
     </section>
 
     <!-- 指導対象 -->
@@ -327,7 +331,7 @@ const withBase = (path) => `${BASE}${path.replace(/^\/+/, "")}`;
     <!-- 問い合わせ -->
     <section class="contact">
       <p>受講のご相談はお気軽にお問い合わせください。</p>
-      <a href={withBase("contact/")} class="contact-button">お問い合わせ</a>
+      <a href="/contact/" class="contact-button">お問い合わせ</a>
     </section>
 
     <!-- フッター -->
@@ -335,130 +339,135 @@ const withBase = (path) => `${BASE}${path.replace(/^\/+/, "")}`;
       <p>© プロ塾</p>
     </footer>
 
-    <!-- JS（DOMができてから） -->
+    <!-- ===== JS（必ず body の最後） ===== -->
     <script>
-      window.addEventListener("DOMContentLoaded", () => {
-        // ===== メニュー =====
-        const button = document.getElementById("menuButton");
-        const menu = document.getElementById("menu");
+      const button = document.getElementById("menuButton");
+      const menu = document.getElementById("menu");
 
-        button.addEventListener("click", () => {
-          menu.classList.toggle("open");
-          button.classList.toggle("open");
-        });
-
-        // ===== スライダー =====
-        const track = document.getElementById("sliderTrack");
-        const dotsWrap = document.getElementById("sliderDots");
-        const dots = Array.from(dotsWrap.querySelectorAll(".dot"));
-
-        let current = 0;
-        const total = dots.length;
-        let timer = null;
-
-        function updateSlider(index) {
-          current = index;
-          track.style.transform = `translateX(-${current * 100}%)`;
-          dots.forEach((d, i) => d.classList.toggle("is-active", i === current));
-        }
-
-        function next() {
-          updateSlider((current + 1) % total);
-        }
-
-        function start() {
-          stop();
-          timer = setInterval(next, 3500);
-        }
-
-        function stop() {
-          if (timer) clearInterval(timer);
-          timer = null;
-        }
-
-        dots.forEach((dot, i) => {
-          dot.addEventListener("click", () => {
-            updateSlider(i);
-            start();
-          });
-        });
-
-        updateSlider(0);
-        start();
-
-        // ===== スワイプ =====
-        const slider = document.querySelector(".slider");
-
-        let startX = 0;
-        let startY = 0;
-        let deltaX = 0;
-        let isSwiping = false;
-
-        function onStart(x, y) {
-          startX = x;
-          startY = y;
-          deltaX = 0;
-          isSwiping = true;
-          stop();
-        }
-
-        function onMove(x, y) {
-          if (!isSwiping) return;
-
-          const dx = x - startX;
-          const dy = y - startY;
-
-          if (Math.abs(dy) > Math.abs(dx)) return;
-
-          deltaX = dx;
-
-          track.style.transition = "none";
-          const percent = (deltaX / slider.clientWidth) * 100;
-          track.style.transform = `translateX(calc(-${current * 100}% + ${percent}%))`;
-        }
-
-        function onEnd() {
-          if (!isSwiping) return;
-          isSwiping = false;
-
-          track.style.transition = "transform 400ms ease";
-
-          const threshold = slider.clientWidth * 0.2;
-          if (deltaX > threshold) {
-            updateSlider((current - 1 + total) % total);
-          } else if (deltaX < -threshold) {
-            updateSlider((current + 1) % total);
-          } else {
-            updateSlider(current);
-          }
-
-          start();
-        }
-
-        slider.addEventListener(
-          "touchstart",
-          (e) => {
-            const t = e.touches[0];
-            onStart(t.clientX, t.clientY);
-          },
-          { passive: true }
-        );
-
-        slider.addEventListener(
-          "touchmove",
-          (e) => {
-            const t = e.touches[0];
-            onMove(t.clientX, t.clientY);
-          },
-          { passive: true }
-        );
-
-        slider.addEventListener("touchend", onEnd);
-
-        slider.addEventListener("mousedown", (e) => onStart(e.clientX, e.clientY));
-        window.addEventListener("mousemove", (e) => onMove(e.clientX, e.clientY));
-        window.addEventListener("mouseup", onEnd);
+      button.addEventListener("click", () => {
+        menu.classList.toggle("open");
+        button.classList.toggle("open"); // ★ これが超重要
       });
+
+		// ===== スライダー =====
+			const track = document.getElementById("sliderTrack");
+			const dotsWrap = document.getElementById("sliderDots");
+			const dots = Array.from(dotsWrap.querySelectorAll(".dot"));
+
+			let current = 0;
+			const total = dots.length;
+			let timer = null;
+
+			function updateSlider(index) {
+  			current = index;
+  			track.style.transform = `translateX(-${current * 100}%)`;
+
+  			dots.forEach((d, i) => {
+    			d.classList.toggle("is-active", i === current);
+  			});
+			}
+
+			function next() {
+  			updateSlider((current + 1) % total);
+			}
+
+			function start() {
+  			stop();
+  			timer = setInterval(next, 3500); // 3.5秒ごと
+			}
+
+			function stop() {
+  			if (timer) clearInterval(timer);
+  			timer = null;
+			}
+
+			// ドットで移動
+			dots.forEach((dot, i) => {
+  			dot.addEventListener("click", () => {
+    			updateSlider(i);
+    			start(); // 触ったらタイマーリセット
+  			});
+			});
+
+			// 最初に起動
+			updateSlider(0);
+			start();
+
+
+			// ===== スワイプ対応（タッチで左右移動）=====
+			let startX = 0;
+			let startY = 0;
+			let deltaX = 0;
+			let isSwiping = false;
+
+			const slider = document.querySelector(".slider"); // スライダー全体
+
+			function onStart(x, y) {
+ 			 	startX = x;
+  			startY = y;
+  			deltaX = 0;
+  			isSwiping = true;
+  			stop(); // 触ったら自動送りを止める（誤爆防止）
+			}
+
+			function onMove(x, y) {
+  			if (!isSwiping) return;
+
+  			const dx = x - startX;
+  			const dy = y - startY;
+
+  			// 縦スクロールのほうが強いならスワイプ扱いしない
+  			if (Math.abs(dy) > Math.abs(dx)) return;
+
+				deltaX = dx;
+
+  			// 指に追従（ドラッグ中に動く）
+  			track.style.transition = "none";
+  			const percent = (deltaX / slider.clientWidth) * 100;
+  			track.style.transform = `translateX(calc(-${current * 100}% + ${percent}%))`;
+			}
+
+			function onEnd() {
+  			if (!isSwiping) return;
+  			isSwiping = false;
+
+  			// 通常のアニメーションに戻す
+  			track.style.transition = "transform 400ms ease";
+
+  			const threshold = slider.clientWidth * 0.2; // 20%動いたらスライド確定
+  			if (deltaX > threshold) {
+    			// 右へスワイプ → 前へ
+    			updateSlider((current - 1 + total) % total);
+  			} else if (deltaX < -threshold) {
+    			// 左へスワイプ → 次へ
+    			updateSlider((current + 1) % total);
+  			} else {
+    			// ちょい動き → 元に戻す
+    			updateSlider(current);
+  			}
+
+  			start(); // 自動送り再開
+			}
+
+			// タッチ
+			slider.addEventListener("touchstart", (e) => {
+  			const t = e.touches[0];
+  			onStart(t.clientX, t.clientY);
+			}, { passive: true });
+
+			slider.addEventListener("touchmove", (e) => {
+  			const t = e.touches[0];
+  			onMove(t.clientX, t.clientY);
+			}, { passive: true });
+
+			slider.addEventListener("touchend", onEnd);
+
+			// マウス（PCでもドラッグで動くようにしたい場合）
+			slider.addEventListener("mousedown", (e) => onStart(e.clientX, e.clientY));
+			window.addEventListener("mousemove", (e) => onMove(e.clientX, e.clientY));
+			window.addEventListener("mouseup", onEnd);
     </script>
+
+
   </body>
 </html>
