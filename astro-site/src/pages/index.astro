@@ -261,6 +261,23 @@
   			font-family: 'Zen Maru Gothic', sans-serif;
 			}
 
+			.overlay {
+  			position: fixed;
+  			inset: 60px 0 0 0;    /* ヘッダー下から全体 */
+  			background: rgba(0,0,0,0.35);
+
+			  opacity: 0;
+  			pointer-events: none;
+  			transition: opacity 0.3s ease;
+
+  			z-index: 800;         /* menu(900)より下 */
+			}
+
+			.overlay.open {
+  			opacity: 1;
+  			pointer-events: auto;
+  			}
+
     </style>
   </head>
 
@@ -488,22 +505,19 @@
 			window.addEventListener("mousemove", (e) => onMove(e.clientX, e.clientY));
 			window.addEventListener("mouseup", onEnd);
 
-			.overlay {
-  			position: fixed;
-  			inset: 60px 0 0 0;    /* ヘッダー下から全体 */
-  			background: rgba(0,0,0,0.35);
+			const overlay = document.getElementById("overlay");
 
-			  opacity: 0;
-  			pointer-events: none;
-  			transition: opacity 0.3s ease;
+			button.addEventListener("click", () => {
+  			menu.classList.toggle("open");
+  			button.classList.toggle("open");
+  			overlay.classList.toggle("open");
+			});
 
-  			z-index: 800;         /* menu(900)より下 */
-			}
-
-			.overlay.open {
-  			opacity: 1;
-  			pointer-events: auto;
-  			}
+			overlay.addEventListener("click", () => {
+  			menu.classList.remove("open");
+  			button.classList.remove("open");
+  			overlay.classList.remove("open");
+			});
     </script>
 
 
