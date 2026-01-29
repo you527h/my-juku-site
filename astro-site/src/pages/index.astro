@@ -444,6 +444,11 @@
   			stop(); // 触ったら自動送りを止める（誤爆防止）
 			}
 
+			if (Math.abs(dy) > Math.abs(dx)) {
+  			track.style.transition = "transform 400ms ease";
+  			return;
+			}
+
 			function onMove(x, y) {
   			if (!isSwiping) return;
 
