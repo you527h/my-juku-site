@@ -88,7 +88,7 @@
         position: fixed;
         top: 0;
         width: 100%;
-        hight: 60px;
+        height: 60px;
         z-index: 1000;
         background: #E7D0A9;
         border-bottom: 1px solid #ddd;
@@ -381,18 +381,6 @@
     <script>
       const button = document.getElementById("menuButton");
       const menu = document.getElementById("menu");
-			const overlay = documnent.getElementById("overlay");
-
-      button.addEventListener("click", () => {
-        menu.classList.toggle("open");
-        button.classList.toggle("open"); // ★ これが超重要
-      });
-
-			overlay.addEventListener("click", () => {
-			 	menu.classList.remove("open");
-    		button.classList.remove("open");
-  			overlay.classList.remove("open");
-			});
 
 
 		// ===== スライダー =====
@@ -526,6 +514,7 @@
   			button.classList.remove("open");
   			overlay.classList.remove("open");
 			});
+
     </script>
 
 
