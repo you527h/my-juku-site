@@ -150,22 +150,22 @@
         transform: translateY(-10px) rotate(-45deg);
       }
 
-			/* メニュー本体：右半分 */
-			.menu {
-  			position: fixed;
-  			top: 60px;            /* ヘッダー高さに合わせる（固定なら60px） */
-  			right: 0;
-  			width: 80vw;          /* 画面の右半分 */
-  			height: calc(100vh - 60px);
+		　/* メニュー本体：右半分 */
+　　　	.menu {
+  		　position: fixed;
+  		　top: 60px;            /* ヘッダー高さに合わせる（固定なら60px） */
+  		　right: 0;
+  		　width: 80vw;          /* 画面の右半分 */
+  		　height: calc(100vh - 60px);
 
-  			background: rgba(245,245,220,1);
+  		　background: rgba(245,245,220,1);
 
-  			/* 右に押し出して隠す */
-  			transform: translateX(100%);
-  			transition: transform 0.3s ease;
+  		　/* 右に押し出して隠す */
+  		　transform: translateX(100%);
+  		　transition: transform 0.3s ease;
 
-  			z-index: 900;         /* ヘッダー(1000)より下、スライダーより上 */
-			}
+  		　z-index: 900;         /* ヘッダー(1000)より下、スライダーより上 */
+		　}
 
 			/* 開いたとき：元の位置に戻す */
 			.menu.open {
