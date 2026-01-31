@@ -33,6 +33,7 @@
 
 			/* ===== スライダー ===== */
 			.slider {
+        position: relative;
   			z-index: 0;
         border-radius: 10%;
         overflow: hidden;
@@ -68,7 +69,7 @@
   			position: absolute;
   			left: 0px;
   			right: 0px;
-  			botom: 0px;
+  			bottom: 0px;
   			display: flex;
   			justify-content: center;
   			gap: 10px;
@@ -120,14 +121,14 @@
         width: auto;
       }
       .logo-text{
-        dispay: flex;
-        flex-drection: column;
+        display: flex;
+        flex-direction: column;
         line-height: 1;
       }
 			.logo-main{
         color: #fff;
         font-size: 26px;
-        dispaly: block
+        display: block
       }
       .logo-sub{
         font-size: 12px;
@@ -412,19 +413,18 @@
           <!-- 画像end -->
         </div>             
       </div>
-      </div>
 
-  			<dev class="dots" id="sliderDots" aria-label="スライド切替">
+  			<div class="dots" id="sliderDots" aria-label="スライド切替">
     			<button class="dot is-active" aria-label="1枚目へ"></button>
     			<button class="dot" aria-label="2枚目へ"></button>
     			<button class="dot" aria-label="3枚目へ"></button>
     			<button class="dot" aria-label="4枚目へ"></button>
-        </dev>
+        </div>
   		</section>
 
     <!-- ファーストビュー -->
     <section class="hero">
-      <h1 class="hero-title">プロ講師による1：1の完全個別指導</h>
+      <h1 class="hero-title">プロ講師による1：1の完全個別指導</h1>
     </section>
 
     <!-- 塾の概要 -->
