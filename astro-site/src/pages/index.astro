@@ -18,23 +18,27 @@
 			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 			<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
 
-    <style>
+		<style>
+			/*== CSS ==*/ 
       /* ===== 共通 ===== */
       body {
         margin: 0;
-        font-family: cursive;
+        /* 通常フォント */
+        font-family: Montserrat;
         line-height: 1.6;
         color: #333;
         padding-top: 60px; /* ヘッダー固定分 */
+        background: rgba(240,240,240);
       }
 
 			/* ===== スライダー ===== */
 			.slider {
-  			position: relative;
-        z-index: 0;
+  			z-index: 0;
+        border-radius: 10%;
         overflow: hidden;
-  			max-width: 100%;
+        aspect-ratio: 16 / 16; /* ← 縦横比固定 */
   			background: #eee;
+        margin-bottom: 20px;
 			}
 
 			.slider-track {
@@ -46,28 +50,35 @@
 			.slide {
   			min-width: 100%;
 			}
+      @media (min-width: 768px) {
+        .slide {
+          height: 360px;
+        }
+      }
 
 			.slide img {
   			width: 100%;
+        height: 100%;
   			display: block;
-  			height: auto;
 			}
+
 
 			/* ドット */
 			.dots {
   			position: absolute;
-  			left: 0;
-  			right: 0;
-  			bottom: 10px;
+  			left: 0px;
+  			right: 0px;
+  			botom: 0px;
   			display: flex;
   			justify-content: center;
   			gap: 10px;
 			}
 
 			.dot {
-  			width: 5px;
-  			height: 5px;
-  			border-radius: 1px;
+  			width: 8px;
+  			height: 8px;
+        padding: 0px;
+  			border-radius: 50%;
   			border: none;
   			background: rgba(200, 200, 200, 1);
   			cursor: pointer;
@@ -75,6 +86,7 @@
 
 			.dot.is-active {
   			background: rgba(100, 100, 100, 1);
+        transform: scale(1.3);
 			}
 
 
@@ -98,9 +110,7 @@
       }
 
       .logo {
-        margin: 10px;
-        font-size: 30px;
-        color: #000000;
+        padding: 10px;
         display: flex;
         align-items: center;
         gap: 8px;
@@ -108,11 +118,21 @@
 			.logo img{
         height: 40px;
         width: auto;
-        display: block;
       }
-			.logo-text{
+      .logo-text{
+        dispay: flex;
+        flex-drection: column;
+        line-height: 1;
+      }
+			.logo-main{
         color: #fff;
-        font-size: 30px  
+        font-size: 26px;
+        dispaly: block
+      }
+      .logo-sub{
+        font-size: 12px;
+        color: rgba(60,60,0);
+        display: block;
       }
 
       /* ===== ハンバーガーボタン ===== */
@@ -144,28 +164,30 @@
 
       .menu-button.open span:nth-child(2) {
         opacity: 0;
+        transform: scaleX(0);
       }
 
       .menu-button.open span:nth-child(3) {
         transform: translateY(-10px) rotate(-45deg);
       }
 
-		　/* メニュー本体：右半分 */
-　　　	.menu {
-  		　position: fixed;
-  		　top: 60px;            /* ヘッダー高さに合わせる（固定なら60px） */
-  		　right: 0;
-  		　width: 80vw;          /* 画面の右半分 */
-  		　height: calc(100vh - 60px);
+			/* メニュー本体：右半分 */
+			.menu {
+  			position: fixed;
+  			top: 60px;            /* ヘッダー高さに合わせる（固定なら60px） */
+  			right: 0;
+  			width: 80vw;          /* 画面の右半分 */
+  			height: calc(100vh - 60px);
+        padding: 20px 0px;
 
-  		　background: rgba(245,245,220,1);
+  			background: rgba(245,245,220,1);
 
-  		　/* 右に押し出して隠す */
-  		　transform: translateX(100%);
-  		　transition: transform 0.3s ease;
+  			/* 右に押し出して隠す */
+  			transform: translateX(100%);
+  			transition: transform 0.3s ease;
 
-  		　z-index: 900;         /* ヘッダー(1000)より下、スライダーより上 */
-		　}
+  			z-index: 900;         /* ヘッダー(1000)より下、スライダーより上 */
+			}
 
 			/* 開いたとき：元の位置に戻す */
 			.menu.open {
@@ -192,9 +214,23 @@
         background: #f5f5f5;
       }
 
+      body.menu-open {
+        overflow: hidden;
+      }
+
       /* ===== ファーストビュー ===== */
+      .jukuname {
+        padding: 5px 15px;
+        background: rgba(200,200,200);
+      }
+      .jukuname-text {
+        font-size: 20px;
+        font-weight: 1000;
+        
+      }
+
       .hero {
-        padding: 20px 20px;
+        padding: 1px 5px;
         background: #DDDDDD;
         text-align: center;
       }
@@ -277,14 +313,24 @@
   			opacity: 1;
   			pointer-events: auto;
   		}
+		</style>
+	</head>
 
-    </style>
-  </head>
-
-  <body>
+	<body>
+		<!-- HTML -->
     <!-- ヘッダー -->
     <header class="header">
-			<h1 class="logo"><img src="/images/pic_01.JPG"><span class="logo-text">プロ塾</span></h1> 
+			<h1 class="logo">
+        
+        <!-- 画像 -->
+        <img src="https://raw.githubusercontent.com/you527h/my-juku-site/main/astro-site/public/images/pic_01.JPG" alt="logo">
+        <!-- 画像end -->
+        
+        <span class="logo-text">
+          <span class="logo-sub">家庭教師・個別指導</span>
+          <span class="logo-main">プロ塾</span>
+        </span>  
+        </h1> 
 
       <button class="menu-button" id="menuButton" aria-label="メニュー">
         <span></span>
@@ -302,26 +348,79 @@
       </nav>
     </header>
 		<div class="overlay" id="overlay"></div>
+    <!-- 塾名 -->
+    <section class="jukuname">
+      <div class="jukuname-text">
+      プロ講師個別指導塾
+       </div>
+     </section>
+
 		<!-- スライダー -->
 		<section class="slider" aria-label="お知らせスライダー">
   		<div class="slider-track" id="sliderTrack">
-   			<div class="slide is-active">
-      		<img src="/images/pic_01.JPG" alt="スライド1">
-    		</div>
-    		<div class="slide">
-     	 	<img src="/images/pic_02.JPG" alt="スライド2">
-    		</div>
-    		<div class="slide">
-      		<img src="/images/pic_01.JPG" alt="スライド3">
-    		</div>
-  		</div>
+        
+        <!-- 最後のコピー -->
+   			<div class="slide">
+          
+          <!-- 画像 -->
+          <img src="https://raw.githubusercontent.com/you527h/my-juku-site/main/astro-site/public/images/pic_02.JPG" alt="logo">
+          <!-- 画像end -->
 
-  			<div class="dots" id="sliderDots" aria-label="スライド切替">
+        </div>
+        
+        <!-- 1枚目 -->
+    		<div class="slide">
+          
+          <!-- 画像 -->
+          <img src="https://raw.githubusercontent.com/you527h/my-juku-site/main/astro-site/public/images/pic_01.JPG" alt="logo">
+          <!-- 画像end -->
+
+        </div>
+        
+        <!-- 2枚目 -->
+    		<div class="slide">
+          
+          <!-- 画像 -->
+      		<img src="https://raw.githubusercontent.com/you527h/my-juku-site/main/astro-site/public/images/pic_02.JPG" alt="logo">
+          <!-- 画像end -->
+
+        </div>
+        
+        <!-- 3枚目 -->
+    		<div class="slide">
+          
+          <!-- 画像 -->
+          <img src="https://raw.githubusercontent.com/you527h/my-juku-site/main/astro-site/public/images/pic_01.JPG" alt="logo">
+          <!-- 画像end -->
+
+        </div>
+        
+        <!-- 4枚目 -->
+    		<div class="slide">
+          
+          <!-- 画像 -->
+      		<img src="https://raw.githubusercontent.com/you527h/my-juku-site/main/astro-site/public/images/pic_02.JPG" alt="logo">
+          <!-- 画像end -->
+
+        </div>
+        
+        <!-- 最初のコピー -->
+    		<div class="slide">
+          
+          <!-- 画像 -->
+      		<img src="https://raw.githubusercontent.com/you527h/my-juku-site/main/astro-site/public/images/pic_01.JPG" alt="logo">
+          <!-- 画像end -->
+        </div>             
+      </div>
+      </div>
+
+  			<dev class="dots" id="sliderDots" aria-label="スライド切替">
     			<button class="dot is-active" aria-label="1枚目へ"></button>
     			<button class="dot" aria-label="2枚目へ"></button>
     			<button class="dot" aria-label="3枚目へ"></button>
-  		</div>
-		</section>
+    			<button class="dot" aria-label="4枚目へ"></button>
+        </dev>
+  		</section>
 
     <!-- ファーストビュー -->
     <section class="hero">
@@ -377,151 +476,197 @@
       <p>© プロ塾</p>
     </footer>
 
-    <!-- ===== JS（必ず body の最後） ===== -->
-    <script>
+		<script>
+			/*== javascript ==*/
       const button = document.getElementById("menuButton");
       const menu = document.getElementById("menu");
 
 
 		// ===== スライダー =====
-			const track = document.getElementById("sliderTrack");
-			const dotsWrap = document.getElementById("sliderDots");
-			const dots = Array.from(dotsWrap.querySelectorAll(".dot"));
+const track = document.getElementById("sliderTrack");
+const dotsWrap = document.getElementById("sliderDots");
+const dots = Array.from(dotsWrap.querySelectorAll(".dot"));
 
-			let current = 0;
-			const total = dots.length;
-			let timer = null;
+const slides = Array.from(document.querySelectorAll(".slide"));
+const slideCount = slides.length;           // コピー込みの枚数
+const realTotal = dots.length;              // 本物の枚数
 
-			function updateSlider(index) {
-  			current = index;
-  			track.style.transform = `translateX(-${current * 100}%)`;
+let current = 1;                            // 本物1枚目から開始（コピーが0）
+let timer = null;
 
-  			dots.forEach((d, i) => {
-    			d.classList.toggle("is-active", i === current);
-  			});
-			}
+// 初期位置
+track.style.transform = `translateX(-${current * 100}%)`;
 
-			function next() {
-  			updateSlider((current + 1) % total);
-			}
+// ドット更新（current → 本物indexに変換）
+function updateDots() {
+  const realIndex = (current - 1 + realTotal) % realTotal;
+  dots.forEach((d, i) => d.classList.toggle("is-active", i === realIndex));
+}
 
-			function start() {
-  			stop();
-  			timer = setInterval(next, 3500); // 3.5秒ごと
-			}
+function moveTo(index) {
+  track.style.transition = "transform 400ms ease";
+  track.style.transform = `translateX(-${index * 100}%)`;
+  current = index;
+  updateDots();
+}
 
-			function stop() {
-  			if (timer) clearInterval(timer);
-  			timer = null;
-			}
+function next() {
+  moveTo(current + 1);
+}
 
-			// ドットで移動
-			dots.forEach((dot, i) => {
-  			dot.addEventListener("click", () => {
-    			updateSlider(i);
-    			start(); // 触ったらタイマーリセット
-  			});
-			});
+function prev() {
+  moveTo(current - 1);
+}
 
-			// 最初に起動
-			updateSlider(0);
-			start();
+function start() {
+  stop();
+  timer = setInterval(next, 3500);
+}
+
+function stop() {
+  if (timer) clearInterval(timer);
+  timer = null;
+}
+
+// コピー位置に行ったら瞬間移動
+track.addEventListener("transitionend", () => {
+  // 一番右のコピー（最後）に来たら、本物1へ瞬間移動
+  if (current === slideCount - 1) {
+    track.style.transition = "none";
+    current = 1;
+    track.style.transform = `translateX(-${current * 100}%)`;
+    updateDots();
+  }
+
+  // 一番左のコピー（最初）に来たら、本物最後へ瞬間移動
+  if (current === 0) {
+    track.style.transition = "none";
+    current = slideCount - 2;
+    track.style.transform = `translateX(-${current * 100}%)`;
+    updateDots();
+  }
+});
+
+// ドットクリック（本物index → currentへ）
+dots.forEach((dot, i) => {
+  dot.addEventListener("click", () => {
+    moveTo(i + 1);   // 本物1枚目が current=1
+    start();
+  });
+});
+
+// 起動
+updateDots();
+start();
 
 
-			// ===== スワイプ対応（タッチで左右移動）=====
-			let startX = 0;
-			let startY = 0;
-			let deltaX = 0;
-			let isSwiping = false;
+// ===== スワイプ対応（タッチで左右移動）=====
+let startX = 0;
+let startY = 0;
+let deltaX = 0;
+let isSwiping = false;
 
-			const slider = document.querySelector(".slider"); // スライダー全体
+const slider = document.querySelector(".slider"); // スライダー全体
 
-			function onStart(x, y) {
- 			 	startX = x;
-  			startY = y;
-  			deltaX = 0;
-  			isSwiping = true;
-  			stop(); // 触ったら自動送りを止める（誤爆防止）
-			}
+function onStart(x, y) {
+  if (document.body.classList.contains("menu-open")) return;
 
-			if (Math.abs(dy) > Math.abs(dx)) {
-  			track.style.transition = "transform 400ms ease";
-  			return;
-			}
+  startX = x;
+  startY = y;
+  deltaX = 0;
+  isSwiping = true;
+  stop(); // 触ったら自動送りを止める
+}
 
-			function onMove(x, y) {
-  			if (!isSwiping) return;
+function onMove(x, y) {
+  if (!isSwiping) return;
 
-  			const dx = x - startX;
-  			const dy = y - startY;
+  const dx = x - startX;
+  const dy = y - startY;
 
-  			// 縦スクロールのほうが強いならスワイプ扱いしない
-  			if (Math.abs(dy) > Math.abs(dx)) return;
+  // 縦スクロールが勝ってたらスワイプを諦める
+  if (Math.abs(dy) > Math.abs(dx)) {
+    isSwiping = false;
+    track.style.transition = "transform 400ms ease";
+    start();
+    return;
+  }
 
-				deltaX = dx;
+  deltaX = dx;
 
-  			// 指に追従（ドラッグ中に動く）
-  			track.style.transition = "none";
-  			const percent = (deltaX / slider.clientWidth) * 100;
-  			track.style.transform = `translateX(calc(-${current * 100}% + ${percent}%))`;
-			}
+  // 指に追従
+  track.style.transition = "none";
+  const percent = (deltaX / slider.clientWidth) * 100;
+  track.style.transform = `translateX(calc(-${current * 100}% + ${percent}%))`;
+}
 
-			function onEnd() {
-  			if (!isSwiping) return;
-  			isSwiping = false;
+function onEnd() {
+  if (!isSwiping) return;
+  isSwiping = false;
 
-  			// 通常のアニメーションに戻す
-  			track.style.transition = "transform 400ms ease";
+  track.style.transition = "transform 400ms ease";
 
-  			const threshold = slider.clientWidth * 0.2; // 20%動いたらスライド確定
-  			if (deltaX > threshold) {
-    			// 右へスワイプ → 前へ
-    			updateSlider((current - 1 + total) % total);
-  			} else if (deltaX < -threshold) {
-    			// 左へスワイプ → 次へ
-    			updateSlider((current + 1) % total);
-  			} else {
-    			// ちょい動き → 元に戻す
-    			updateSlider(current);
-  			}
+  const threshold = slider.clientWidth * 0.2;
 
-  			start(); // 自動送り再開
-			}
+  if (deltaX > threshold) {
+    prev(); // ← 無限ループ版に合わせる
+  } else if (deltaX < -threshold) {
+    next(); // ← 無限ループ版に合わせる
+  } else {
+    moveTo(current); // 元に戻す
+  }
 
-			// タッチ
-			slider.addEventListener("touchstart", (e) => {
-  			const t = e.touches[0];
-  			onStart(t.clientX, t.clientY);
-			}, { passive: true });
+  start();
+}
 
-			slider.addEventListener("touchmove", (e) => {
-  			const t = e.touches[0];
-  			onMove(t.clientX, t.clientY);
-			}, { passive: true });
+// タッチ
+slider.addEventListener(
+  "touchstart",
+  (e) => {
+    const t = e.touches[0];
+    onStart(t.clientX, t.clientY);
+  },
+  { passive: true }
+);
 
-			slider.addEventListener("touchend", onEnd);
+slider.addEventListener(
+  "touchmove",
+  (e) => {
+    const t = e.touches[0];
 
-			// マウス（PCでもドラッグで動くようにしたい場合）
-			slider.addEventListener("mousedown", (e) => onStart(e.clientX, e.clientY));
-			window.addEventListener("mousemove", (e) => onMove(e.clientX, e.clientY));
-			window.addEventListener("mouseup", onEnd);
+    // 横スワイプ中はスクロールを止める（これが効く）
+    const dx = t.clientX - startX;
+    const dy = t.clientY - startY;
+    if (Math.abs(dx) > Math.abs(dy)) e.preventDefault();
 
+    onMove(t.clientX, t.clientY);
+  },
+  { passive: false }
+);
+
+slider.addEventListener("touchend", onEnd);
+
+// マウス（PCドラッグ）
+slider.addEventListener("mousedown", (e) => onStart(e.clientX, e.clientY));
+window.addEventListener("mousemove", (e) => onMove(e.clientX, e.clientY));
+window.addEventListener("mouseup", onEnd);
 			const overlay = document.getElementById("overlay");
 
 			button.addEventListener("click", () => {
   			menu.classList.toggle("open");
   			button.classList.toggle("open");
   			overlay.classList.toggle("open");
+        document.body.classList.toggle("menu-open");
 			});
 
 			overlay.addEventListener("click", () => {
   			menu.classList.remove("open");
   			button.classList.remove("open");
   			overlay.classList.remove("open");
+        document.body.classList.remove("menu-open");
 			});
 
-    </script>
+		</script>
 
-
-  </body>
-</html>
+	</body>
+</html>.
