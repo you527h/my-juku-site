@@ -12,11 +12,12 @@
 
 			/* ===== スライダー ===== */
 			.slider {
+        position: relative;
         border-radius: 16px;
         overflow: hidden;
         aspect-ratio: 1 / 1; /* ← 縦横比固定 */
   			background: #eee;
-        margin-bottom: 20px;
+        margin: 20px;
 			}
       @media (min-width: 768px) {
         .slider {
@@ -50,7 +51,7 @@
 
 			/* ドット */
 			.dots {
-  			/*position: absolute;*/
+	  		position: absolute;
   			left: 0px;
   			right: 0px;
   			bottom: 0px;
