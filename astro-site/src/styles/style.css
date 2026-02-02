@@ -6,7 +6,7 @@
         font-family: cursive;
         line-height: 1.6;
         color: #333;
-        padding-top: 120px; /* ヘッダー固定分 */
+        padding-top: 60px; /* ヘッダー固定分 */
         background: rgb(240,240,240);
       }
 
