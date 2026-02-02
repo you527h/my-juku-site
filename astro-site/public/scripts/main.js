@@ -1,4 +1,4 @@
-		<script>
+
 			/*== javascript ==*/
       const button = document.getElementById("menuButton");
       const menu = document.getElementById("menu");
@@ -187,5 +187,3 @@ window.addEventListener("mouseup", onEnd);
   			overlay.classList.remove("open");
         document.body.classList.remove("menu-open");
 			});
-
-		</script>
