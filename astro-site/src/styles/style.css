@@ -2,7 +2,7 @@
 body {
   /* 通常フォント */
   font-family: 'Anton';
-  line-height: 1.6;
+  line-height: 1.8;
   color: #000;
   background: #fff;
 }
@@ -30,15 +30,15 @@ html, body {
   border: 1px solid;
 }
 
-.conbi-text{
+.combi-text{
   display: flex;
   flex-direction: column;
   line-height: 1.3;
   margin: 0px 0px 0px 10px;
   font-weight: 100;
 }
+
 .text-main{
-  color: #fff;
   font-size: 20px;
   color: #000;
   display: block;
@@ -130,7 +130,7 @@ html, body {
 .menu ul {
   list-style: none;
 	display: flex;
-  margin-left: 30px;
+  margin-left: 0;
   flex-direction: column;
   align-items: flex-start;
   gap: 24px;
@@ -151,10 +151,25 @@ body.menu-open {
   overflow: hidden;
 }
 
+.menu-combi-text-A{
+  display: flex;
+  flex-direction: column;
+  line-height: 1.3;
+  margin: 0px 0px 0px 10px;
+  font-weight: 100;
+}
+
+.menu-combi-text-B{
+  display: flex;
+  flex-direction: column;
+  line-height: 1.3;
+  margin: 0px 0px 0px 10px;
+  font-weight: 100;
+}
 
 /* ===== スライダー ===== */
 .slider {
-  width: 90%;
+  width: 95%;
   height: 80%;
   position: relative;
   border-radius: 16px;
@@ -171,9 +186,9 @@ body.menu-open {
 .slider-area::after {
   content: "";
   position: absolute;
-  left: 0;
+  left: -10vw;
   top: 0;
-  width: 80%;
+  width: 90vw;
   height: 60%;
   background: rgb(100,200,255);
   z-index: -1;
@@ -223,25 +238,34 @@ body.menu-open {
 /* ===== ファーストビュー ===== */
 /* ===== セクション ===== */
 .A-block {
-  padding: 20px 0 30px;
+  padding: 20px 0 50px;
   max-width: 800px;
 }
 
 .B-block {
-  padding: 20px 0 30px;
-  max-width: 800px;
-  background: rgb(100,100,100);
+  padding: 20px 0 50px;
+  max-width: 800px;  
 }
 
-
-h3{
-  margin: 0 0 5px 25px;
+.title-text-main {
+  family-font: 'Zen Maru Gothic';
+  font-size: 30px;
+  color: #000;
+  display: block;
 }
+
+.title-text-sub {
+  margin-left: 8px;
+  font-size: 16px;
+  color: #000;
+  display: block;
+}
+
 
 hr{
   border: none;
   height: 3px;
-  background: #000;
+  background: rgb(100,200,255);
   margin: 0 0 10px;
 }
 
