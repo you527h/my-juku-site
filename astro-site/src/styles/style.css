@@ -248,7 +248,7 @@ body.menu-open {
 }
 
 .title-text-main {
-  family-font: 'Zen Maru Gothic';
+  font-family: 'Zen Maru Gothic';
   font-size: 30px;
   color: #000;
   display: block;
