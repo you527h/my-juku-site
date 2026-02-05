@@ -1,139 +1,100 @@
----
-import "../styles/style.css";
----
-
-<!DOCTYPE html>
-<html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- 検索結果に出るタイトル -->
-    <title>プロ講師個別指導塾｜プロ塾</title>
-
-    <!-- 検索結果に出る説明文 -->
-    <meta
-      name="description"
-      content="プロ講師による1：1の個別指導塾。高校受験・大学受験に対応。対面指導で学習習慣から改善します。"
-    />
-
-		<!-- 文字の書体を部分的に変更するもの -->
-			<link rel="preconnect" href="https://fonts.googleapis.com">
-			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-			<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-	</head>
-
 	<body>
     <!-- ヘッダー -->
-    <header class="header">
-			<h1 class="logo">
-        
-        <!-- 画像 -->
-        <img src="/images/pic_01.JPG" alt="logo">
-        <!-- 画像end -->
-        
-        <span class="logo-text">
-          <span class="logo-sub">家庭教師・個別指導</span>
-          <span class="logo-main">プロ塾</span>
-        </span>  
-        </h1> 
-
+    <h1 class="header">
+      <img src="https://raw.githubusercontent.com/you527h/my-juku-site/main/astro-site/public/images/pic_01.JPG" alt="logo">
+      <span class="conbi-text">
+        <span class="text-sub">家庭教師・個別指導・集団授業</span>
+        <span class="text-main">プロ講師指導塾</span>
+      </span>
       <button class="menu-button" id="menuButton" aria-label="メニュー">
         <span></span>
         <span></span>
-        <span></span>
+        <logo></logo>
       </button>
-
       <nav class="menu" id="menu">
+        <h1 class="header">
+          <img src="https://raw.githubusercontent.com/you527h/my-juku-site/main/astro-site/public/images/pic_01.JPG" alt="logo">
+          <span class="conbi-text">
+            <span class="text-sub">家庭教師・個別指導・集団授業</span>
+            <span class="text-main">プロ講師指導塾</span>
+          </span>
+        </h1>
         <ul>
-          <li><a href="/about">塾について</a></li>
-          <li><a href="/course">講座・料金</a></li>
-          <li><a href="/contact">お問い合わせ</a></li>
+          <div class="conbi-text">
+            <li><a href="/privateteacher">家庭教師</a></li>
+            <span class="text-sub">全教科サポート可能</span>
+          </div>
+          <div class="conbi-text">
+            <li><a href="/officialteacher">個別・集団授業</a></li>
+            <span class="text-sub">受講認定テスト必須</span>
+          </div>
+          <div class="conbi-text">
+            <li><a href="/course">講座・料金</a></li>
+            <span class="text-sub">全教科サポート可能</span>
+          </div>
+          <div class="conbi-text">
+            <li><a href="/about">プロ講師個別指導塾とは</a></li>
+            <span class="text-sub">代表からの挨拶</span>
+          </div>
+          <div class="conbi-text">
+            <li><a href="/contact">お問い合わせ</a></li>
+            <span class="text-sub">電話(10:00-22:00), LINE(24時間), e-mailで受付中</span>
+          </div>
         </ul>
       </nav>
-    </header>
-		<div class="overlay" id="overlay"></div>
-    <!-- 塾名 -->
-    <section class="jukuname">
-      <div class="jukuname-text">
-      プロ講師個別指導塾
-       </div>
-     </section>
-
+		  <div class="overlay" id="overlay"></div>    
+     </h1> 
+    
 		<!-- スライダー -->
-		<section class="slider" aria-label="お知らせスライダー">
-  		<div class="slider-track" id="sliderTrack">
-        
-        <!-- 最後のコピー -->
-   			<div class="slide">
-          
-          <!-- 画像 -->
-          <img src="/images/pic_02.JPG" alt="logo">
-          <!-- 画像end -->
-
+    <section class="slider-area">
+		  <section class="slider" aria-label="お知らせスライダー">
+  		  <div class="slider-track" id="sliderTrack">
+          <!-- 最後のコピー -->
+   			  <div class="slide">
+            <img src="https://raw.githubusercontent.com/you527h/my-juku-site/main/astro-site/public/images/pic_02.JPG" alt="logo">
+          </div>
+          <!-- 1枚目 -->
+    		  <div class="slide">
+            <img src="https://raw.githubusercontent.com/you527h/my-juku-site/main/astro-site/public/images/pic_01.JPG" alt="logo">
+          </div>        
+          <!-- 2枚目 -->
+    		  <div class="slide">
+      		  <img src="https://raw.githubusercontent.com/you527h/my-juku-site/main/astro-site/public/images/pic_02.JPG" alt="logo">
+          </div>
+          <!-- 3枚目 -->
+    		  <div class="slide">
+            <img src="https://raw.githubusercontent.com/you527h/my-juku-site/main/astro-site/public/images/pic_01.JPG" alt="logo">
+          </div>
+          <!-- 4枚目 -->
+    		  <div class="slide">
+      		  <img src="https://raw.githubusercontent.com/you527h/my-juku-site/main/astro-site/public/images/pic_02.JPG" alt="logo">
+          </div>        
+          <!-- 最初のコピー -->
+    		  <div class="slide">
+      		  <img src="https://raw.githubusercontent.com/you527h/my-juku-site/main/astro-site/public/images/pic_01.JPG" alt="logo">
+          </div>             
         </div>
-        
-        <!-- 1枚目 -->
-    		<div class="slide">
-          
-          <!-- 画像 -->
-          <img src="/images/pic_01.JPG" alt="logo">
-          <!-- 画像end -->
-
-        </div>
-        
-        <!-- 2枚目 -->
-    		<div class="slide">
-          
-          <!-- 画像 -->
-      		<img src="/images/pic_02.JPG" alt="logo">
-          <!-- 画像end -->
-
-        </div>
-        
-        <!-- 3枚目 -->
-    		<div class="slide">
-          
-          <!-- 画像 -->
-          <img src="/images/pic_01.JPG" alt="logo">
-          <!-- 画像end -->
-
-        </div>
-        
-        <!-- 4枚目 -->
-    		<div class="slide">
-          
-          <!-- 画像 -->
-      		<img src="/images/pic_02.JPG" alt="logo">
-          <!-- 画像end -->
-
-        </div>
-        
-        <!-- 最初のコピー -->
-    		<div class="slide">
-          
-          <!-- 画像 -->
-      		<img src="/images/pic_01.JPG" alt="logo">
-          <!-- 画像end -->
-        </div>             
-      </div>
-
+      </section>
+    </section>
   	<div class="dots" id="sliderDots" aria-label="スライド切替">
-   			<button class="dot is-active" aria-label="1枚目へ"></button>
-  			<button class="dot" aria-label="2枚目へ"></button>
-   			<button class="dot" aria-label="3枚目へ"></button>
-   			<button class="dot" aria-label="4枚目へ"></button>
+   		<button class="dot is-active" aria-label="1枚目へ"></button>
+  		<button class="dot" aria-label="2枚目へ"></button>
+   		<button class="dot" aria-label="3枚目へ"></button>
+   		<button class="dot" aria-label="4枚目へ"></button>
     </div>
- 		</section>
 
     <!-- ファーストビュー -->
-    <section class="hero">
-      <h1 class="hero-title">プロ講師による1：1の完全個別指導  編集4</h1>
+    <section class="A-block">
+      <h3>効率の良さ</h3>
+      <hr>
+      <p>
+      指導歴5年以上のベテラン講師陣による高品質な授業を受けて<b>短期間で</b>成績を上げ<b>合格</b>を勝ち取りましょう
+      </p>
     </section>
 
     <!-- 塾の概要 -->
-    <section class="section">
-      <h2 class="section-title">プロ塾について</h2>
+    <section class="A-block">
+      <h3>プロ塾について</h3>
 			<b>学習状態の徹底管理を行い、数学・英語を中心に一人ひとりに最適な指導をいたします。</b>
       <p>
         プロ塾では、指導経験の豊富な講師が授業を担当する個別指導塾です。
@@ -144,7 +105,7 @@ import "../styles/style.css";
     <section class="section">
       <h2 class="section-title">指導方針</h2>
 			<p>
-				「正しく効率よく学習する」がコンセプトとなっています。
+				「 正しく効率よく学習する」がコンセプトとなっています。
 			</p>
         
     </section>
@@ -179,6 +140,5 @@ import "../styles/style.css";
     <footer class="footer">
       <p>© プロ塾</p>
     </footer>
-<script src="/scripts/main.js" defer></script>
 	</body>
 </html>
