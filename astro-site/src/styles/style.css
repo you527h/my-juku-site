@@ -314,8 +314,13 @@ p {
 }
 
 li {
-  font-weight: 500;
+  font-weight: 1000;
   font-size: 18px;
+}
+
+.li-font {
+  font-weght: 500;
+  font-size:18px;
 }
 
 .li-text {
