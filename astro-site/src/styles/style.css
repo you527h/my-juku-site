@@ -17,6 +17,11 @@ html, body {
   font-family: 'Zen Maru Gothic', sans-serif;
 }
 
+.gothic-light {
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-weight: 500;
+}
+
 
 /* == ヘッダー == */
 .header{
@@ -316,11 +321,6 @@ p {
 li {
   font-weight: 1000;
   font-size: 18px;
-}
-
-.li-font {
-  font-weght: 500;
-  font-size:18px;
 }
 
 .li-text {
