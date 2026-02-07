@@ -307,6 +307,19 @@ li {
   border-radius: 5px;
 }
 
+.line-url {
+  display: inline-block;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  margin-left: 6px;
+  padding: 2px 12px;
+  background: #06C755;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  border: 3px solid #fff;
+}
+
 /* ===== フッター ===== */
 .footer {
   padding: 16px;
