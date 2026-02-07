@@ -7,14 +7,16 @@ body {
   background: #fff;
 }
 
-.gothic {
-  font-family: 'Zen Maru Gothic', sans-serif;
-}
-
 html, body {
   height: 100%;
   -webkit-text-size-adjust: 100%;
 }
+
+/* ==== 文字の書体を部分的に変更 === */
+.gothic {
+  font-family: 'Zen Maru Gothic', sans-serif;
+}
+
 
 /* == ヘッダー == */
 .header{
@@ -228,7 +230,6 @@ body.menu-open {
 
 
 /* ===== ファーストビュー ===== */
-/* ===== セクション ===== */
 .A-block {
   padding: 20px 0 50px;
   max-width: 800px;
@@ -265,11 +266,12 @@ p {
   margin:0 15px 0;
 }
 
-b {
+.b {
   display: block;
   text-align: right;
   margin-right: 20px;
   font-size: 1.2em;
+  font-weight: 1000;
 }
 
 li {
@@ -281,44 +283,34 @@ li {
   margin-bottom: 16px;
 }
 
-      /* ===== 問い合わせ ===== */
-      .contact {
-        padding: 40px 20px;
-        text-align: center;
-        background: #eee;
-      }
+.li-text li{
+  list-style-posotion: inside;
+  list-style-type: disc;
+}
 
-      .contact-button {
-        display: inline-block;
-        margin-top: 12px;
-        padding: 12px 24px;
-        background: #333;
-        color: #fff;
-        text-decoration: none;
-      }
+/* ===== 問い合わせ ===== */
+.contact {
+  padding: 20px 20px;
+  text-align: center;
+  background: #eee;
+  font-size: 16px;
+}
 
-      /* ===== フッター ===== */
-      .footer {
-        padding: 16px;
-        text-align: center;
-        font-size: 14px;
-        background: #222;
-        color: #fff;
-      }
+.contact-button {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 8px 16px;
+  background: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
 
-      /* ===== レスポンシブ ===== */
-      @media (max-width: 768px) {
-        .hero-title {
-          font-size: 22px;
-        }
-        .section-title {
-          font-size: 18px;
-        }
-      }
-
-			/* ==== 文字の書体を部分的に変更 === */
-			.block-font {
-  			font-family: 'Anton', sans-serif;
-  			letter-spacing: 1px;
-			}
-
+/* ===== フッター ===== */
+.footer {
+  padding: 16px;
+  text-align: center;
+  font-size: 14px;
+  background: #222;
+  color: #fff;
+}
