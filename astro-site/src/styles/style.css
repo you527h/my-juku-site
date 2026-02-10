@@ -237,7 +237,7 @@ body.menu-open {
 .first-view-area {
   position: relative;
   border-radius: 1px;  
-  padding: 18vw 0 30vw 0;
+  padding: 18vw 0 20vw 0;
   margin: 20px 0 0 0;
   color: #fff;
 }
@@ -273,6 +273,71 @@ body.menu-open {
   background: rgb(201,168,44);
   border-radius: 2px;  
 }
+
+/* ===== 選択バー ===== */
+.service-bar {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 0 70px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+}
+
+.service-btn-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3px;
+  border-radius: 5px;
+  background: #fff;
+  border: 3px solid rgb(0,0,0);
+  color: #fff;
+  text-decoration: none;
+  transition: transform 0.05s ease, background 0.05s ease;
+  line-height: 1.6;
+  background: rgb(201,168,44);
+}
+
+.service-btn-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3px;
+  border-radius: 5px;
+  background: #fff;
+  border: 3px solid rgb(0,0,0);
+  color: #fff;
+  text-decoration: none;
+  transition: transform 0.05s ease, background 0.05s ease;
+  line-height: 1.6;
+  background: rgb(90,90,90);
+}
+
+.service-btn-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3px;
+  border-radius: 5px;
+  background: #fff;
+  border: 3px solid rgb(0,0,0);
+  color: #fff;
+  text-decoration: none;
+  transition: transform 0.05s ease, background 0.05s ease;
+  line-height: 1.6;
+  background: rgb(0,0,0);
+}
+
+.service-title {
+  font-weight: 900;
+  font-size: 16px;
+}
+
+.service-sub {
+  font-size: 10px;
+}
+
 
 /* ===== コラム ===== */
 .A-block {
@@ -310,12 +375,24 @@ p {
   margin:0 15px 0;
 }
 
+.list {
+  margin-top: 15px;
+  margin-left: -15px;
+  font-weight: 1000;
+  font-size: 18px;  
+}
+
 .b {
   display: block;
   text-align: right;
   margin-right: 20px;
   font-size: 1.2em;
   font-weight: 1000;
+}
+
+b{
+  font-weight: 1000;
+  font-size: 18px;
 }
 
 li {
@@ -331,6 +408,8 @@ li {
   list-style-posotion: inside;
   list-style-type: disc;
 }
+
+
 
 /* ===== 問い合わせ ===== */
 .contact {
