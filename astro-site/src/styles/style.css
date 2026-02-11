@@ -299,6 +299,7 @@ html, body {
 }
 
 .column-list {
+  margin-top: 40px;
   font-size: 18px;
   font-weight: 900;
   display: block;
