@@ -92,7 +92,12 @@
   color: #000;
   text-decoration: none;
   padding: 8px;
+  transition: background 0.05s ease;
 }
+
+.menu a:hover {
+  background: rgba(0,0,0,0);
+
 
 .menu a::before {
   content: "";
@@ -104,4 +109,8 @@
   background: rgb(201,168,44);
   border-radius: 2px;
 }
+
+
+
+
 
