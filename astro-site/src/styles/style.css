@@ -4,7 +4,7 @@ body {
   font-family: 'Anton';
   line-height: 1.8;
   color: #000;
-  background: #fff;
+  background: #0ff;
 }
 
 html, body {
@@ -272,7 +272,7 @@ body.menu-open {
   border-radius: 2px;  
 }
 
-/* ===== 選択バー ===== */
+/* ===== 選択バー ===== 
 .service-bar {
   width: 100%;
   max-width: 900px;
@@ -335,9 +335,9 @@ body.menu-open {
 .service-sub {
   font-size: 10px;
 }
+*/
 
-
-/* ===== コラム ===== 
+/* ===== コラム ===== */
 .A-block {
   padding: 20px 0 50px;
   max-width: 800px;
@@ -373,13 +373,6 @@ p {
   margin:0 15px 0;
 }
 
-.list {
-  margin-top: 15px;
-  margin-left: -15px;
-  font-weight: 1000;
-  font-size: 18px;  
-}
-
 .b {
   display: block;
   text-align: right;
@@ -388,10 +381,6 @@ p {
   font-weight: 1000;
 }
 
-b{
-  font-weight: 1000;
-  font-size: 18px;
-}
 
 li {
   font-weight: 1000;
@@ -407,7 +396,26 @@ li {
   list-style-type: disc;
 }
 
+
+
+/* ===== 原因ぽいもの =====*/
+/*
+b{
+  font-weight: 1000;
+  font-size: 18px;
+}
+
+.list {
+  margin-top: 15px;
+  margin-left: -15px;
+  font-weight: 1000;
+  font-size: 18px;  
+}
 */
+
+
+
+
 
 /* ===== 問い合わせ ===== */
 .contact {
