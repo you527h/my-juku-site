@@ -149,6 +149,17 @@ html, body {
   text-decoration: none;
 }
 
+.menu a::before {
+  content: "";
+  position: absolte;
+  left: 0;
+  top: 6px;
+  width: 4px;
+  height: 70%;
+  background: rgb(201,168,44);
+  border-radius: 2px;
+}
+
 .menu a:hover {
   background: rgb(200,200,200);
 }
