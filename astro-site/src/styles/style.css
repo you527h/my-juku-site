@@ -142,14 +142,14 @@ html, body {
   gap: 24px;
 }
 
-.menu li a {
+.menu a {
   font-size: 20px;
   font-weight: 1000;
   color: #000;
   text-decoration: none;
 }
 
-.menu li a:hover {
+.menu a:hover {
   background: rgb(200,200,200);
 }
 
@@ -161,11 +161,10 @@ body.menu-open {
   display: flex;
   flex-direction: column;
   line-height: 1.3;
-  margin: 0px 0px 0px 10px;
+  margin: 10px 10px 20px 100px(;
   font-weight: 100;
-  align-items: center;
 }
-
+  
 /* ===== スライダー ===== */
 .slider {
   width: 95%;
