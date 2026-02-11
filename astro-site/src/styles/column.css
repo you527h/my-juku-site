@@ -95,7 +95,7 @@
 
 .menu a::before {
   content: "";
-  position: absolte;
+  position: absolute;
   left: 0;
   top: 6px;
   bottom: 6px;
