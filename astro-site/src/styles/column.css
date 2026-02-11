@@ -2,11 +2,11 @@
 
 .subject {
 	display: inline-block;
-    margin-right: 8px;
 }
 
 .column-list {
   font-size: 18px;
   font-weight: 900;
   display: block;
+  margin-top: 20px;
 }
