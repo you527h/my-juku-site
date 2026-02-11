@@ -240,6 +240,7 @@ body.menu-open {
   margin: 20px 0 0 0;
   color: #fff;
 }
+
 .first-view-area::after {
   content: "";
   position: absolute;
