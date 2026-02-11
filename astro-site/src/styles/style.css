@@ -4,7 +4,7 @@ body {
   font-family: 'Anton';
   line-height: 1.8;
   color: #000;
-  background: #f0f;
+  background: #ff0;
 }
 
 html, body {
@@ -328,14 +328,6 @@ body.menu-open {
 }
 */
 
-.service-title {
-  font-weight: 900;
-  font-size: 16px;
-}
-
-.service-sub {
-  font-size: 10px;
-}
 
 
 /* ===== コラム ===== */
