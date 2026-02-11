@@ -102,4 +102,5 @@
   height: 70%;
   background: rgb(201,168,44);
   border-radius: 2px;
+  z-index: 1000;
 }
