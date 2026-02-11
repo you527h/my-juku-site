@@ -11,6 +11,14 @@
   margin-top: 20px;
 }
 
+.course-list {
+  font-sisze: 16px;
+  font-weight: 900;
+  display: block;
+  margin-top: 16px;
+}
+
+
 /* ===== select bar ===== */
 .service-bar {
   width: 100%;
