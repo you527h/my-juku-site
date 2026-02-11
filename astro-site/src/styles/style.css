@@ -298,6 +298,18 @@ html, body {
   display: block;
 }
 
+.column-list {
+  font-size: 18px;
+  font-weight: 1000;
+}
+
+hr {
+  border: none;
+  height: 3px;
+  background: rgb(201,168,44);
+  margin: 0 0 10px;
+}
+
 .b {
   display: block;
   text-align: right;
@@ -318,18 +330,6 @@ html, body {
 b {
   font-weight: 1000;
   font-size: 18px;
-}
-
-li {
-  font-weight: 1000;
-  font-size: 18px;
-}
-
-hr {
-  border: none;
-  height: 3px;
-  background: rgb(201,168,44);
-  margin: 0 0 10px;
 }
 
 p {
