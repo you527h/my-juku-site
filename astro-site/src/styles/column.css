@@ -82,3 +82,22 @@
 .service-sub {
   font-size: 10px;
 }
+
+
+.menu a {
+  font-size: 20px;
+  font-weight: 900;
+  color: #000;
+  text-decoration: none;
+}
+
+.menu a::before {
+  content: "";
+  position: absolte;
+  left: 0;
+  top: 6px;
+  width: 4px;
+  height: 70%;
+  background: rgb(201,168,44);
+  border-radius: 2px;
+}
