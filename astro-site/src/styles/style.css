@@ -4,7 +4,7 @@ body {
   font-family: 'Anton';
   line-height: 1.8;
   color: #000;
-  background: #0ff;
+  background: #f0f;
 }
 
 html, body {
@@ -326,6 +326,7 @@ body.menu-open {
   line-height: 1.6;
   background: rgb(0,0,0);
 }
+*/
 
 .service-title {
   font-weight: 900;
@@ -335,7 +336,7 @@ body.menu-open {
 .service-sub {
   font-size: 10px;
 }
-*/
+
 
 /* ===== コラム ===== */
 .A-block {
