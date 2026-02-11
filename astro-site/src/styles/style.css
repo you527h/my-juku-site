@@ -303,10 +303,6 @@ html, body {
   font-weight: 1000;
 }
 
-span.column-list {
-  display: block;
-}
-
 hr {
   border: none;
   height: 3px;
