@@ -4,7 +4,7 @@ body {
   font-family: 'Anton';
   line-height: 1.8;
   color: #000;
-  background: #f0f;
+  background: #fff;
 }
 
 html, body {
@@ -272,7 +272,7 @@ body.menu-open {
   border-radius: 2px;  
 }
 
-/* ===== 選択バー ===== 
+/* ===== 選択バー ===== */
 .service-bar {
   width: 100%;
   max-width: 900px;
@@ -335,7 +335,7 @@ body.menu-open {
 .service-sub {
   font-size: 10px;
 }
-*/
+
 
 /* ===== コラム ===== 
 .A-block {
