@@ -317,7 +317,6 @@ p {
   font-weight: 1000;
 }
 
-
 li {
   font-weight: 1000;
   font-size: 18px;
@@ -331,10 +330,6 @@ li {
   list-style-position: inside;
   list-style-type: disc;
 }
-
-
-
-/* ===== 原因ぽいもの =====*/
 
 b {
   font-weight: 1000;
