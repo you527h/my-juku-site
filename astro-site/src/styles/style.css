@@ -142,10 +142,6 @@ html, body {
   gap: 24px;
 }
 
-.menu a:hover {
-  background: rgb(200,200,200);
-}
-
 .menu-open {
   overflow: hidden;
 }
