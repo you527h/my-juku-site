@@ -5,3 +5,8 @@
     margin-right: 8px;
 }
 
+.column-list {
+  font-size: 18px;
+  font-weight: 900;
+  display: block;
+}
