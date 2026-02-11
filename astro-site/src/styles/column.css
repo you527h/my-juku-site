@@ -97,8 +97,8 @@
   content: "";
   position: absolute;
   left: 0;
-  top: 6px;
-  bottom: 6px;
+  top: 0;
+  bottom: 0;
   width: 4px;
   background: rgb(201,168,44);
   border-radius: 2px;
