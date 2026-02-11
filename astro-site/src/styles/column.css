@@ -10,3 +10,67 @@
   display: block;
   margin-top: 20px;
 }
+
+/* ===== select bar ===== */
+.service-bar {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 0 70px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+}
+
+.service-btn-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3px;
+  border-radius: 5px;
+  background: #fff;
+  border: 3px solid rgb(0,0,0);
+  color: #fff;
+  text-decoration: none;
+  transition: transform 0.05s ease, background 0.05s ease;
+  line-height: 1.6;
+  background: rgb(201,168,44);
+}
+
+.service-btn-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3px;
+  border-radius: 5px;
+  background: #fff;
+  border: 3px solid rgb(0,0,0);
+  color: #fff;
+  text-decoration: none;
+  transition: transform 0.05s ease, background 0.05s ease;
+  line-height: 1.6;
+  background: rgb(90,90,90);
+}
+
+.service-btn-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3px;
+  border-radius: 5px;
+  background: #fff;
+  border: 3px solid rgb(0,0,0);
+  color: #fff;
+  text-decoration: none;
+  transition: transform 0.05s ease, background 0.05s ease;
+  line-height: 1.6;
+  background: rgb(0,0,0);
+}
+
+.service-title {
+  font-weight: 900;
+  font-size: 16px;
+}
+
+.service-sub {
+  font-size: 10px;
+}
