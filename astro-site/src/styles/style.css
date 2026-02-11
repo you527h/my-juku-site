@@ -144,7 +144,7 @@ html, body {
 
 .menu a {
   font-size: 20px;
-  font-weight: 1000;
+  font-weight: 900;
   color: #000;
   text-decoration: none;
 }
@@ -300,7 +300,8 @@ html, body {
 
 .column-list {
   font-size: 18px;
-  font-weight: 1000;
+  font-weight: 900;
+  display: block;
 }
 
 hr {
@@ -315,7 +316,7 @@ hr {
   text-align: right;
   margin-right: 20px;
   font-size: 1.2em;
-  font-weight: 1000;
+  font-weight: 900;
 }
 
 .li-text {
@@ -328,7 +329,7 @@ hr {
 }
 
 b {
-  font-weight: 1000;
+  font-weight: 900;
   font-size: 18px;
 }
 
