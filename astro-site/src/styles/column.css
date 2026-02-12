@@ -95,10 +95,6 @@
   transition: background 0.05s ease;
 }
 
-.menu a:hover {
-  background: rgba(0,0,0,0);
-
-
 .menu a::before {
   content: "";
   position: absolute;
