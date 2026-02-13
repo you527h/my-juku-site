@@ -160,7 +160,7 @@ html, body {
   position: relative;
   border-radius: 16px;
   overflow: hidden;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 3 / 2;
   margin: 0 auto;
 }
 
