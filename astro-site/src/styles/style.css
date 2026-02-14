@@ -182,7 +182,7 @@ html, body {
 
 .slider-track {
   display: flex;
-  transition: transform 400ms ease;
+  transition: transform 800ms ease;
   will-change: transform;
 }
 
