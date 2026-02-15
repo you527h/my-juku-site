@@ -175,7 +175,7 @@ html, body {
   top: 0;
   width: 75vw;
   height: 60%;
-  background: rgb(201,168,44);
+  background: #fff/* rgb(201,168,44)*/;
   z-index: -1;
   border-radius: 16px;
 } 
@@ -191,10 +191,11 @@ html, body {
 }
 
 .slide img {
-  width: 100%;
+  width: 100vw;
   height: 100%;
   object-fit: contain;
   object-position: center top;
+  left: -8px;
 }
 
 /* ドット */
