@@ -4,7 +4,7 @@ body {
   font-family: 'Anton';
   line-height: 1.8;
   color: #000;
-  background: #fff;
+  background: rgb(240,240,240);
 }
 
 html, body {
@@ -175,7 +175,7 @@ html, body {
   top: 0;
   width: 75vw;
   height: 60%;
-  background: rgb(90,90,90);
+  background: rgb(201,168,44);
   z-index: -1;
   border-radius: 16px;
 } 
