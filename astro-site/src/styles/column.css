@@ -135,7 +135,7 @@ section.picture img{
 
 
   /* 端末の安全領域(iPhone)に配慮 */
-  padding: 5px 12px cal(10px + env(safe-area-inset-bottom));
+  padding: 10px 12px cal(10px + env(safe-area-inset-bottom));
 }
 
 /* 中身を横並び */
