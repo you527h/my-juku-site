@@ -74,3 +74,230 @@ html, body {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===== スライダー ===== */
+.slider {
+  width: 96%;
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  aspect-ratio: 3 / 2;
+  margin: 0 auto;
+}
+
+.slider-area {
+  position: relative;
+  padding: 0;
+}
+.slider-area::after {
+  content: "";
+  position: absolute;
+  left: -10vw;
+  top: 0;
+  width: 75vw;
+  height: 60%;
+  background: #fff/* rgb(201,168,44)*/;
+  z-index: -1;
+  border-radius: 16px;
+} 
+
+.slider-track {
+  display: flex;
+  transition: transform 800ms ease;
+  will-change: transform;
+}
+
+.slide {
+  min-width: 100%;
+}
+
+.slide img {
+  width: 100vw;
+  height: 100%;
+  object-fit: contain;
+  object-position: center top;
+  margin-left: -8px;
+}
+
+/* ドット */
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  padding: 0px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(200, 200, 200, 0.5);
+  cursor: pointer;
+}
+
+.dot.is-active {
+  background: rgb(201,168,44);
+  transform: scale(1.3);
+}
+
+
+/* ===== ファーストビュー ===== */
+.first-view-area {
+  position: relative;
+  border-radius: 1px;  
+  padding: 18vw 0 20vw 0;
+  margin: 20px 0 0 0;
+  color: #fff;
+}
+
+.first-view-area::after {
+  content: "";
+  position: absolute;
+  left: -10vw;
+  top: 0;
+  width: 100vw;
+  height: 50vw;
+  background: rgb(90,90,90);
+  z-index: -1;
+  border-radius: 8px;
+} 
+
+.first-view-text-main{
+  font-size: 7vw;
+  color: #fff;
+  display: block;
+}
+
+.first-view-text-sub{
+  margin-left: 3vw;
+  font-size: 4vw;
+  color: #fff;
+  display: block;
+}
+
+.beside-line {
+  height: 3px;
+  width: 90vw;
+  background: rgb(201,168,44);
+  border-radius: 2px;  
+}
+
+
+/* ===== コラム ===== */
+.A-block {
+  padding: 20px 0 50px;
+  max-width: 800px;
+}
+
+.B-block {
+  padding: 0 0 50px;
+  max-width: 800px;  
+}
+
+.title-text-main {
+  font-family: 'Zen Maru Gothic';
+  font-size: 30px;
+  color: #000;
+  display: block;
+}
+
+.title-text-sub {
+  margin-left: 8px;
+  font-size: 16px;
+  color: #000;
+  display: block;
+}
+
+
+hr {
+  border: none;
+  height: 3px;
+  background: rgb(201,168,44);
+  margin: 0 0 10px;
+}
+
+.b {
+  display: block;
+  text-align: right;
+  margin-right: 20px;
+  font-size: 1.2em;
+  font-weight: 900;
+}
+
+.li-text {
+  margin-bottom: 16px;
+}
+
+.li-text li{
+  list-style-position: inside;
+  list-style-type: disc;
+}
+
+b {
+  font-weight: 900;
+  font-size: 18px;
+}
+
+p {
+  margin:0 15px 0;
+}
+
+
+/* ===== 問い合わせ ===== */
+.contact {
+  padding: 20px 20px;
+  text-align: center;
+  background: #eee;
+  font-size: 16px;
+}
+
+.contact-button {
+  display: inline-block;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  padding: 8px 16px;
+  background: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.line-url {
+  font-family: 'Zen Maru Gothic', sans-serif;
+  display: inline-block;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  margin-left: 6px;
+  padding: 2px 12px;
+  background: #06C755;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  border: 3px solid #fff;
+}
+
+/* ===== フッター ===== */
+.footer {
+  padding: 16px;
+  text-align: center;
+  font-size: 14px;
+  background: #222;
+  color: #fff;
+}
