@@ -129,15 +129,13 @@ section.picture img{
   z-index: 2000;
 
   /* 半透明 + すりガラス */
-  background: rgba(255, 255, 255, 0.72);
+  background: rgba(255, 255, 255, 0.5);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 
-  /* 上に薄い境界 */
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
 
   /* 端末の安全領域(iPhone)に配慮 */
-  padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+  padding: 5px 12px env(safe-area-inset-bottom);
 }
 
 /* 中身を横並び */
@@ -146,7 +144,7 @@ section.picture img{
   margin: 0 auto;
 
   display: grid;
-  grid-template-columns: 1.3fr 1fr 1fr; /* LINEを少し大きく */
+  grid-template-columns: 2.3fr 1fr 1fr; /* LINEを少し大きく */
   gap: 8px;
   align-items: center;
 }
@@ -158,7 +156,7 @@ section.picture img{
   justify-content: center;
   gap: 8px;
 
-  height: 46px;
+  height: 30px;
   border-radius: 14px;
   text-decoration: none;
 
@@ -195,19 +193,8 @@ section.picture img{
   .cta-btn--sub:hover { background: rgba(0,0,0,0.10); }
 }
 
-/* スマホは2段にして詰まりを回避 */
-@media (max-width: 520px) {
-  .cta-inner {
-    grid-template-columns: 1fr 1fr;
-  }
-  .cta-btn--primary {
-    grid-column: 1 / -1; /* LINEを1段目で横幅100% */
-  }
-}
 
 /* CTAバー分だけ下に余白（ページ最下部が隠れないように） */
 body {
-  padding-bottom: calc(76px + env(safe-area-inset-bottom));
+  padding-bottom: env(safe-area-inset-bottom);
 }
-
-
