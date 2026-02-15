@@ -4,15 +4,32 @@ document.addEventListener("DOMContentLoaded", () => {
   const menu = document.getElementById("menu");
   const overlay = document.getElementById("overlay");
 
+  if (button && menu && overlay) {
+    button.addEventListener("click", () => {
+      menu.classList.toggle("open");
+      button.classList.toggle("open");
+      overlay.classList.toggle("open");
+      document.body.classList.toggle("menu-open");
+    });
+
+    overlay.addEventListener("click", () => {
+      menu.classList.remove("open");
+      button.classList.remove("open");
+      overlay.classList.remove("open");
+      document.body.classList.remove("menu-open");
+    });
+  } else {
+    console.warn("メニュー要素が見つからない");
+  }
+
   // ===== スライダー =====
   const track = document.getElementById("sliderTrack");
   const dotsWrap = document.getElementById("sliderDots");
   const slider = document.querySelector(".slider");
 
-  // 必須要素が無ければ終了（ページによっては存在しないため）
-  if (!button || !menu || !overlay || !track || !dotsWrap || !slider) {
-    console.warn("必要な要素が見つからないため main.js を停止しました");
-    return;
+  if (!track || !dotsWrap || !slider) {
+    console.warn("スライダー要素が見つからないのでスライダーは停止");
+    return; // ← ここで止めてもOK（メニューはもう登録済み）
   }
 
   const dots = Array.from(dotsWrap.querySelectorAll(".dot"));
