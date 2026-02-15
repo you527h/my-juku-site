@@ -1,3 +1,21 @@
 body {
-	background: #0ff;
+	background: #f0f;
+}
+
+/* ===== ハンバーガーボタン ===== */
+.menu-button {
+  display: flex;
+  position: fixed;
+  right: 10px;
+  cursor: pointer;
+  z-index: 1100;
+  width: 50px;
+  height: 50px;
+  padding: 10px 10px 6px;
+  border-radius: 5px;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #000;
+  color: white;
+  border: none;
 }
