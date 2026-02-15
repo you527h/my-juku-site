@@ -166,7 +166,7 @@ html, body {
 
 .slider-area {
   position: relative;
-  padding: 20px 0;
+  padding: 0;
 }
 .slider-area::after {
   content: "";
