@@ -23,7 +23,7 @@
 .service-bar {
   width: 100%;
   max-width: 900px;
-  margin: 0 0 70px;
+  margin: 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1px;
