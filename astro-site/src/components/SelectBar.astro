@@ -1,84 +1,67 @@
-      <section class="service-bar" aria-label="サービスリンク">
-        <a class="service-btn-right" href="/privateteacher">
-          <span class="service-title">家庭教師</span>
-          <span class="service-sub">全科目・講座受講可能</span>
-        </a>
-  
-        <a class="service-btn-center" href="/grouplesson">
-          <span class="service-title">集団授業</span>
-          <span class="service-sub">英語・数学をより深く学ぶ</span>
-        </a>
-  
-        <a class="service-btn-left" href="/officialteacher">
-          <span class="service-title">個別指導</span>
-          <span class="service-sub"> <span class="gothic">1</span> 対 <span class="gothic">1</span> で徹底したサポート</span>
-        </a>
-      </section>
-  
-  
-  <style>
-  
-  .service-bar {
-    width: 100%;
-    max-width: 900px;
-    margin: 0 0 10px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1px;
-  }
-  
-  .service-btn-right {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 3px;
-    border-radius: 5px;
-    background: #fff;
-    border: 3px solid rgb(0,0,0);
-    color: #fff;
-    text-decoration: none;
-    transition: transform 0.05s ease, background 0.05s ease;
-    line-height: 1.6;
-    background: rgb(201,168,44);
-  }
-  
-  .service-btn-center {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 3px;
-    border-radius: 5px;
-    background: #fff;
-    border: 3px solid rgb(0,0,0);
-    color: #fff;
-    text-decoration: none;
-    transition: transform 0.05s ease, background 0.05s ease;
-    line-height: 1.6;
-    background: rgb(0,0,0);
-  }
-  
-  .service-btn-left {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 3px;
-    border-radius: 5px;
-    background: #fff;
-    border: 3px solid rgb(0,0,0);
-    color: #fff;
-    text-decoration: none;
-    transition: transform 0.05s ease, background 0.05s ease;
-    line-height: 1.6;
-    background: rgb(90,90,90);
-  }
-  
-  .service-title {
-    font-weight: 900;
-    font-size: 16px;
-  }
-  
-  .service-sub {
-    font-size: 10px;
-  }
-  </style>
-  
+<section class="service-bar" aria-label="サービスリンク">
+  <a class="service-btn service-btn--gold" href="/privateteacher">
+    <span class="service-title">家庭教師</span>
+    <span class="service-sub">全科目・講座受講可能</span>
+  </a>
+
+  <a class="service-btn service-btn--black" href="/grouplesson">
+    <span class="service-title">集団授業</span>
+    <span class="service-sub">英語・数学をより深く学ぶ</span>
+  </a>
+
+  <a class="service-btn service-btn--gray" href="/officialteacher">
+    <span class="service-title">個別指導</span>
+    <span class="service-sub"><span class="gothic">1</span> 対 <span class="gothic">1</span> で徹底したサポート</span>
+  </a>
+</section>
+
+<style>
+.service-bar {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 0 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px; /* 1pxは狭すぎる */
+}
+
+.service-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 8px;
+  border-radius: 6px;
+  border: 2px solid #000;
+  color: #fff;
+  text-decoration: none;
+  line-height: 1.5;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.service-btn:hover {
+  transform: translateY(-3px);
+  opacity: 0.9;
+}
+
+/* 色だけ分離 */
+.service-btn--gold {
+  background: rgb(201,168,44);
+}
+
+.service-btn--black {
+  background: #000;
+}
+
+.service-btn--gray {
+  background: rgb(90,90,90);
+}
+
+.service-title {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.service-sub {
+  font-size: 11px;
+}
+</style>
