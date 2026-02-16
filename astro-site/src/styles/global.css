@@ -3,5 +3,11 @@ body {
 }
 
 .gothic {
-    
+  font-family: 'Zen Maru Gothic', sans-serif;
 }
+
+.gothic-light {
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-weight: 500;
+}
+
