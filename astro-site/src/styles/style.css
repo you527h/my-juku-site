@@ -21,21 +21,6 @@ html, body {
   font-weight: 500;
 }
 
-html, body {
-  height: 100%;
-  -webkit-text-size-adjust: 100%;
-}
-
-/* ==== 文字の書体を部分的に変更 === */
-.gothic {
-  font-family: 'Zen Maru Gothic', sans-serif;
-}
-
-.gothic-light {
-  font-family: 'Zen Maru Gothic', sans-serif;
-  font-weight: 500;
-}
-
 
 /* == ヘッダー == */
 .header{
