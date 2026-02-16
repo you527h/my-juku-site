@@ -1,22 +1,22 @@
-<section class="service-bar" aria-label="サービスリンク">
-  <a class="service-btn service-btn-gold" href="/privateteacher">
-    <span class="service-title">家庭教師</span>
-    <span class="service-sub">全科目・講座受講可能</span>
+<section class="selectbar-bar" aria-label="サービスリンク">
+  <a class="selectbar-btn selectbar-btn-gold" href="/privateteacher">
+    <span class="selectbar-title">家庭教師</span>
+    <span class="selectbar-sub">全科目・講座受講可能</span>
   </a>
 
-  <a class="service-btn service-btn-black" href="/grouplesson">
-    <span class="service-title">集団授業</span>
-    <span class="service-sub">英語・数学をより深く学ぶ</span>
+  <a class="selectbar-btn selectbar-btn-black" href="/grouplesson">
+    <span class="selectbar-title">集団授業</span>
+    <span class="selectbar-sub">英語・数学をより深く学ぶ</span>
   </a>
 
-  <a class="service-btn service-btn-gray" href="/officialteacher">
-    <span class="service-title">個別指導</span>
-    <span class="service-sub"><span class="gothic">1</span> 対 <span class="gothic">1</span> で徹底したサポート</span>
+  <a class="selectbar-btn selectbar-btn-gray" href="/officialteacher">
+    <span class="selectbar-title">個別指導</span>
+    <span class="selectbar-sub"><span class="selectbar-gothic">1</span> 対 <span class="selectbar-gothic">1</span> で徹底したサポート</span>
   </a>
 </section>
 
 <style>
-.service-bar {
+.selectbar-bar {
   width: 100%;
   max-width: 900px;
   margin: 0 0 10px;
@@ -25,7 +25,7 @@
   gap: 8px; /* 1pxは狭すぎる */
 }
 
-.service-btn {
+.selectbar-btn {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -38,30 +38,33 @@
   transition: transform 0.15s ease, opacity 0.15s ease;
 }
 
-.service-btn:hover {
+.selectbar-btn:hover {
   transform: translateY(-3px);
   opacity: 0.9;
 }
 
-/* 色だけ分離 */
-.service-btn-gold {
+.selectbar-btn-gold {
   background: rgb(201,168,44);
 }
 
-.service-btn-black {
+.selectbar-btn-black {
   background: #000;
 }
 
-.service-btn-gray {
+.selectbar-btn-gray {
   background: rgb(90,90,90);
 }
 
-.service-title {
+.selectbar-title {
   font-weight: 700;
   font-size: 16px;
 }
 
-.service-sub {
+.selectbar-sub {
   font-size: 11px;
+}
+
+.selectbar-gothic {
+  font-family: 'Zen Maru Gothic', sans-serif;
 }
 </style>
