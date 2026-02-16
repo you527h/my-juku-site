@@ -1,85 +1,51 @@
 <div calss="selection">
-	<a class="select-btn" href="/privateteacher">
+	<a class="select-btn-left" href="/privateteacher">
+		<span calss="select-btn-text-main">家庭教師</span>
+		<span class="select-btn-text-sub">全科目・講座受講可能</span>
+	</a>
+	<a class="select-btn-center" href="/privateteacher">
+		<span calss="select-btn-text-main">集団授業</span>
+		<span class="select-btn-text-sub">英語・数学をより深く学ぶ</span>
+	</a>
+	<a class="select-btn-right" href="/privateteacher">
+		<span calss="select-btn-text-main">個別指導</span>
+		<span class="select-btn-text-sub"><span class="selectbar-gothic">1</span> 対 <span class="selectbar-gothic">1</span> で徹底したサポート</span>
+	</a>
 </div>
 
-
-
-
-<section class="selectbar-bar" aria-label="サービスリンク">
-  <a class="selectbar-btn-gold" href="/privateteacher">
-    <span class="selectbar-title">家庭教師</span>
-    <span class="selectbar-sub">全科目・講座受講可能</span>
-  </a>
-
-  <a class="selectbar-btn-black" href="/grouplesson">
-    <span class="selectbar-title">集団授業</span>
-    <span class="selectbar-sub">英語・数学をより深く学ぶ</span>
-  </a>
-
-  <a class="selectbar-btn-gray" href="/officialteacher">
-    <span class="selectbar-title">個別指導</span>
-    <span class="selectbar-sub"><span class="selectbar-gothic">1</span> 対 <span class="selectbar-gothic">1</span> で徹底したサポート</span>
-  </a>
-</section>
-
 <style>
-.selectbar-bar {
-  width: 100%;
-  max-width: 900px;
-  margin: 0 0 10px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
+.selection {
+	display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
-.selectbar-btn:hover {
-  transform: translateY(-3px);
-  opacity: 0.9;
-}
-
-.selectbar-btn-gold {
+.select-btn-left {
+  border: 2px solid rgb(10,10,10);
+  border-radius: 3px;
   background: rgb(201,168,44);
-  display: block;
   text-decoration: none;
-  color: #000;
-  border-radius: 10px;
-  padding: 12px 12px 12px 14px;
-  border: 2px solid rgba(0,0,0,0.08);
-  position: relative;
 }
 
-.selectbar-btn-black {
-  background: #000;
-  display: block;
+.select-btn-center {
+  border: 2px solid rgb(10,10,10);
+  border-radius: 3px;
+  background: rgb(10,10,10);
   text-decoration: none;
-  color: #000;
-  border-radius: 10px;
-  padding: 12px 12px 12px 14px;
-  border: 2px solid rgba(0,0,0,0.08);
-  position: relative;
 }
 
-.selectbar-btn-gray {
-  background: rgb(90,90,90);
-  display: block;
+.select-btn-right {
+  border: 2px solid rgb(90,90,90);
+  border-radius: 3px;
+  background: rgb(201,168,44);
   text-decoration: none;
-  color: #000;
-  border-radius: 10px;
-  padding: 12px 12px 12px 14px;
-  border: 2px solid rgba(0,0,0,0.08);
-  position: relative;
 }
 
-.selectbar-title {
-  font-weight: 700;
+.select-btn-text-main {
   font-size: 16px;
+  font-weight: 900;
 }
 
-.selectbar-sub {
+.select-btn-text-sub {
   font-size: 11px;
-}
-
-.selectbar-gothic {
-  font-family: 'Zen Maru Gothic', sans-serif;
 }
 </style>
