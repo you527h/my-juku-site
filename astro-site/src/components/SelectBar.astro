@@ -1,72 +1,55 @@
-<div class="selection">
-  <div class="select-btn-left">
-    <div class="select-btn-combi">
-      <a class="select-btn-main" href="/pravate-teacher">家庭教師</a>
-      <div class="select-btn-sub">全科目・講座受講可能</div>
-      </div>
-    </div>
-  <div class="select-btn-center">
-    <div class="select-btn-combi">
-      <a class="select-btn-main" href="/mass-class">集団授業</a>
-      <div class="select-btn-sub">英語・数学をより深く学ぶ</div>
-      </div>
-    </div>
-  <div class="select-btn-right">
-    <div class="select-btn-combi">
-      <a class="select-btn-main" href="/noe-class">個別指導</a>
-      <div class="select-btn-sub"><span class="selectbar-gothic">1</span> 対 <span class="selectbar-gothic">1</span> で徹底したサポート</div>
-      </div>
-    </div>
+<div class="sb">
+  <a class="sb-card sb-left" href="/private-teacher">
+    <div class="sb-main">家庭教師</div>
+    <div class="sb-sub">全科目・講座受講可能</div>
+  </a>
+
+  <a class="sb-card sb-center" href="/mass-class">
+    <div class="sb-main">集団授業</div>
+    <div class="sb-sub">英語・数学をより深く学ぶ</div>
+  </a>
+
+  <a class="sb-card sb-right" href="/one-class">
+    <div class="sb-main">個別指導</div>
+    <div class="sb-sub"><span class="sb-g">1</span> 対 <span class="sb-g">1</span> で徹底したサポート</div>
+  </a>
 </div>
 
 <style>
-.selection {
+.sb {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 3px
+  gap: 3px;
 }
 
-.select-btn-left{
+.sb-card{
   border: 3px solid rgb(10,10,10);
   border-radius: 6px;
-  background: rgb(201,168,44);
-}
-
-.select-btn-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 3px solid rgb(10,10,10);
-  border-radius: 6px;
-  background: rgb(10,10,10);
-}
-
-.select-btn-right {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 3px solid rgb(10,10,10);
-  border-radius: 6px;
-  background: rgb(90,90,90);
-}
-
-.select-btn-combi {
-  display: block
-}
-
-.select-btn-main {
-  display: flex;
-  justify-content: center;
-  color: #fff;
   text-decoration: none;
+  padding: 10px 6px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.sb-left  { background: rgb(201,168,44); }
+.sb-center{ background: rgb(10,10,10); }
+.sb-right { background: rgb(90,90,90); }
+
+.sb-main{
+  color: #fff;
   font-size: 16px;
   font-weight: 900;
 }
 
-.select-btn-sub {
-  display: flex;
-  justify-content: center;
-  font-size: 8px;
+.sb-sub{
   color: #fff;
+  font-size: 8px;
+  text-align: center;
 }
+
+.sb-g{ font-weight: 700; }
 </style>
