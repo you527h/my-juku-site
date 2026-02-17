@@ -1,7 +1,9 @@
 <div class="sb">
   <a class="sb-card sb-left" href="/private-teacher">
+<div class="sb-combi">
     <div class="sb-main">家庭教師</div>
     <div class="sb-sub">全科目・講座受講可能</div>
+</div>
   </a>
 
   <a class="sb-card sb-center" href="/mass-class">
@@ -22,7 +24,22 @@
   gap: 3px;
 }
 
-.sb-card{
+.sb-card {
+}
+
+.sb-combi {
+  border: 3px solid rgb(10,10,10);
+  border-radius: 6px;
+  text-decoration: none;
+  padding: 4px 6px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  line-height: 1;
+
 }
 
 .sb-left  { background: rgb(201,168,44); }
