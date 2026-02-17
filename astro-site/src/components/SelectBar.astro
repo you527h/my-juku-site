@@ -1,6 +1,6 @@
 <div calss="selection">
-	<a class="select-btn-left" href="/privateteacher">
-		<div calss="select-btn-main">家庭教師</div>
+	<div class="select-btn-left">
+#		<div calss="select-btn-main">家庭教師</div>
 		<div class="select-btn-sub">全科目・講座受講可能</div>
 	</a>
 	<a class="select-btn-center" href="/privateteacher">
@@ -15,15 +15,21 @@
 
 <style>
 .selection {
-	display: flex;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 3px
 }
 
-.select-btn-left {
-  border: 2px solid rgb(10,10,10);
-  border-radius: 3px;
-  background: rgb(201,168,44);
-  text-decoration: none;
-		align-items: center;
+.select-btn{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+ border: 3px solid rgb(10,10,10);
+ border-radius: 6px;
+}
+
+.select-btn left{
+	
 }
 
 .select-btn-center {
@@ -31,7 +37,6 @@
   border-radius: 3px;
   background: rgb(10,10,10);
   text-decoration: none;
-		align-items: center;
 }
 
 .select-btn-right {
@@ -39,7 +44,6 @@
   border-radius: 3px;
   background: rgb(90,90,90);
   text-decoration: none;
-		align-items: center;
 }
 
 
