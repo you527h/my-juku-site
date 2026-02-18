@@ -1,6 +1,7 @@
 ---
 import Header from "../components/Header.astro";
 import Menu from "../components/Menu.astro";
+import Footer from "../components/Footer.astro";
 import "../styles/global.css";
 const { title = "プロ講師指導塾" } = Astro.props;
 ---
@@ -27,7 +28,7 @@ const { title = "プロ講師指導塾" } = Astro.props;
     <main>
       <slot />
     </main>
-
+		<Footer />
     <script src="/scripts/main.js" defer></script>
   </body>
 </html>
