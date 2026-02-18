@@ -1,1 +1,89 @@
-contactbar
+		<div class="cta-bar">
+ 		 <div class="cta-inner">
+			<a class="cta-btn cta-btn--primary" href="（LINEのURL）">
+				LINEで無料学習相談
+    		</a>
+    		<a class="cta-btn cta-btn--sub" href="tel:080-2404-3554">電話</a>
+    		<a class="cta-btn cta-btn--sub" href="mailto:pro-koshi-juku@gmail.com">メール</a>
+		 </div>
+		</div>
+
+<style>
+.cta-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2000;
+
+  /* 半透明 + すりガラス */
+  background: rgba(255, 255, 255, 0.5);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+
+
+  /* 端末の安全領域(iPhone)に配慮 */
+  padding: 5px 12px env(safe-area-inset-bottom);
+}
+
+/* 中身を横並び */
+.cta-inner {
+  max-width: 980px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 2.3fr 1fr 1fr; /* LINEを少し大きく */
+  gap: 8px;
+  align-items: center;
+}
+
+/* ボタン共通 */
+.cta-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  height: 30px;
+  border-radius: 14px;
+  text-decoration: none;
+
+  font-weight: 800;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+
+  border: 1px solid rgba(0,0,0,0.10);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* メイン（LINE） */
+.cta-btn--primary {
+  background: #06C755; /* LINEグリーン */
+  color: #fff;
+  border-color: rgba(0,0,0,0.08);
+}
+
+/* サブ（電話・メール） */
+.cta-btn--sub {
+  background: rgba(0, 0, 0, 0.06);
+  color: #111;
+}
+
+/* 押した感（スマホ向け） */
+.cta-btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+}
+
+/* ホバーはPCだけ */
+@media (hover: hover) {
+  .cta-btn--primary:hover { filter: brightness(0.95); }
+  .cta-btn--sub:hover { background: rgba(0,0,0,0.10); }
+}
+
+
+/* CTAバー分だけ下に余白（ページ最下部が隠れないように） */
+body {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+</style>
