@@ -4,4 +4,11 @@
     object-fit: contain;
     object-position: center top;
     margin-left: -8px;
+    margin-top: 10px;
+}
+
+.picture img{
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
 }
