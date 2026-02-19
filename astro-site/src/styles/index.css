@@ -71,3 +71,26 @@ b {
 p {
   margin:0 15px 0;
 }
+
+.gothic {
+  font-family: 'Zen Maru Gothic', sans-serif;
+}
+
+
+.subject {
+	display: inline-block;
+}
+
+.column-list {
+  font-size: 18px;
+  font-weight: 900;
+  display: block;
+  margin-top: 20px;
+}
+
+.course-list {
+  font-sisze: 16px;
+  font-weight: 900;
+  display: block;
+  margin-top: 16px;
+}
