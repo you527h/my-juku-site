@@ -2,6 +2,7 @@
 import Header from "../components/Header.astro";
 import CTA from "../components/CTA.astro";
 import Menu from "../components/Menu.astro";
+import Contact from "../components/Contact.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/global.css";
 const { title = "プロ講師指導塾" } = Astro.props;
@@ -28,6 +29,7 @@ const { title = "プロ講師指導塾" } = Astro.props;
 		<main>
 		<Menu />
 		<slot />
+		<Contact />
 		</main>
 		<Footer />
 		<script src="/scripts/main.js" defer></script>
