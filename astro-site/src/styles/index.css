@@ -14,6 +14,15 @@
 	margin-top: 10px;
 }
 
+.gothic-light {
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-weight: 500;
+}
+
+.gothic {
+  font-family: 'Zen Maru Gothic', sans-serif;
+}
+
 .A-block {
   padding: 20px 0 50px;
   max-width: 800px;
@@ -71,11 +80,6 @@ b {
 p {
   margin:0 15px 0;
 }
-
-.gothic {
-  font-family: 'Zen Maru Gothic', sans-serif;
-}
-
 
 .subject {
 	display: inline-block;
