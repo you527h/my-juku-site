@@ -3,6 +3,7 @@ body {
     font-family: 'Anton';
     line-height: 1.8;
     background: #fff;
+    padding-bottom: calc(80px + env(safe-area-inset-bottom));
 }
 
 body.menu-open {
