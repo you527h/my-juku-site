@@ -24,7 +24,7 @@
 }
 
 .A-block {
-  padding: 20px 0 0px;
+  padding: 20px 0 50px;
   max-width: 800px;
 }
 
@@ -105,18 +105,12 @@ p {
   pointer-events: none;
 }
 
-.flip-card{
-  display: block;
-  cursor: pointer;
-  perspective: 1000px;
-}
-
 .flip-inner{
   position: relative;
   width: 100%;
-  min-height: 280px;        /* ←まず表示させる用 */
+  min-height: 250px;        /* ←まず表示させる用 */
   transform-style: preserve-3d;
-  transition: transform 400ms ease;
+  transition: transform 500ms ease;
 }
 
 .flip-check:checked + .flip-card .flip-inner{
@@ -229,4 +223,25 @@ p {
 @keyframes foldFade{
   from{ opacity: 0; transform: translateY(-4px); }
   to{ opacity: 1; transform: translateY(0); }
+}
+
+.flip-card{
+  display: block;
+  perspective: 1000px;
+}
+
+/* タップさせる領域（好きな場所・デザインにできる） */
+.tap-area{
+  display: inline-block;
+  margin: 0 0 0 20px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-weight: 900;
+  cursor: pointer;
+
+  /* 見た目は好みで */
+  border: 2px solid rgb(201,168,44);
+  color: rgb(201,168,44);
+  background: transparent;
+  user-select: none;
 }
