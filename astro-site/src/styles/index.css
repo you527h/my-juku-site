@@ -247,3 +247,19 @@ p {
   background: transparent;
   user-select: none;
 }
+
+/* まず両面とも触れない（=スクロールもさせない） */
+.flip-front,
+.flip-back{
+  pointer-events: none;
+}
+
+/* チェックOFF（表が見えてる時）は表だけ触れる */
+.flip-check:not(:checked) + .flip-card .flip-front{
+  pointer-events: auto;
+}
+
+/* チェックON（裏が見えてる時）は裏だけ触れる */
+.flip-check:checked + .flip-card .flip-back{
+  pointer-events: auto;
+}
