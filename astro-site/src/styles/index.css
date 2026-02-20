@@ -117,3 +117,75 @@ p {
   display: block;
   margin-top: 16px;
 }
+
+.flip-wrap{
+  width: min(420px, 92vw);
+  margin: 0 auto;
+}
+
+.flip-check{
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.flip-card{
+  display: block;
+  cursor: pointer;
+  perspective: 1000px; /* 立体感 */
+}
+
+.flip-inner{
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9; /* 好きに */
+  transform-style: preserve-3d;
+  transition: transform 500ms ease;
+}
+
+/* タップで反転 */
+.flip-check:checked + .flip-card .flip-inner{
+  transform: rotateY(180deg);
+}
+
+.flip-face{
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden; /* iOS対策 */
+  border: 2px solid rgb(10,10,10);
+}
+
+/* 表（ゴールド） */
+.flip-front{
+  background: rgb(201,168,44);
+}
+
+/* 裏 */
+.flip-back{
+  transform: rotateY(180deg);
+  background: rgb(255,255,255);
+}
+
+.flip-title{
+  font-weight: 900;
+  font-size: 40px;
+  letter-spacing: 0.08em;
+  color: rgb(10,10,10);
+}
+
+.flip-text{
+  font-weight: 700;
+  font-size: 16px;
+  color: rgb(10,10,10);
+  padding: 18px;
+  text-align: center;
+}
+
+/* 動き苦手な人用 */
+@media (prefers-reduced-motion: reduce){
+  .flip-inner{ transition: none; }
+}
