@@ -47,6 +47,7 @@ hr {
   height: 3px;
   background: rgb(201,168,44);
   margin: 0 0 10px;
+  width: 90vw;
 }
 
 .b {
@@ -181,4 +182,51 @@ p {
   align-items: center;
   gap: 10px;   /* 間隔 */
   margin-bottom: 10px;
+}
+
+
+/* 折りたたみ */
+.fold{
+  border-radius: 12px;
+}
+
+/* summaryのデフォルト三角を消す */
+.fold-summary{
+  list-style: none;
+  cursor: pointer;
+  padding: 6px 0;
+}
+.fold-summary::-webkit-details-marker{
+  display: none;
+}
+
+/* 見出し行に「開閉アイコン」を出す */
+.fold-summary{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.fold-summary::after{
+  content: "＋";
+  font-size: 22px;
+  font-weight: 900;
+  margin-right: 10px;
+  color: rgb(201,168,44);
+}
+.fold[open] > .fold-summary::after{
+  content: "−";
+}
+
+/* 開いたときの中身 */
+.fold-body{
+  padding-top: 6px;
+}
+
+/* アニメーション（好みで） */
+.fold-body{
+  animation: foldFade 180ms ease;
+}
+@keyframes foldFade{
+  from{ opacity: 0; transform: translateY(-4px); }
+  to{ opacity: 1; transform: translateY(0); }
 }
