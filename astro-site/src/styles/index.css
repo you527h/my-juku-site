@@ -95,7 +95,7 @@ p {
 }
 
 .flip-wrap{
-  width: min(420px, 92vw);
+  width: min(420px, 96vw);
   margin: 20px auto;
 }
 
