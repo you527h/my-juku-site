@@ -114,9 +114,9 @@ p {
 .flip-inner{
   position: relative;
   width: 100%;
-  min-height: 250px;        /* ←まず表示させる用 */
+  min-height: 320px;        /* ←まず表示させる用 */
   transform-style: preserve-3d;
-  transition: transform 500ms ease;
+  transition: transform 400ms ease;
 }
 
 .flip-check:checked + .flip-card .flip-inner{
