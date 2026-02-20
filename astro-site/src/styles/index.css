@@ -216,6 +216,23 @@ p {
 /* 開いたときの中身 */
 .fold-body{
   padding-top: 6px;
+  overflow: hidden;
+  transform-origin: top;
+  transition: 
+    opacity 400ms ease,
+    transform 400ms ease;
+}
+
+/* 初期（閉じてる時） */
+.fold:not([open]) .fold-body{
+  opacity: 0;
+  transform: translateY(-15px);
+}
+
+/* 開いた時 */
+.fold[open] .fold-body{
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* アニメーション（好みで） */
@@ -226,6 +243,7 @@ p {
   from{ opacity: 0; transform: translateY(-4px); }
   to{ opacity: 1; transform: translateY(0); }
 }
+
 
 .flip-card{
   display: block;
