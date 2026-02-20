@@ -219,8 +219,8 @@ p {
   overflow: hidden;
   transform-origin: top;
   transition: 
-    opacity 4000ms ease,
-    transform 4000ms ease;
+    opacity 400ms ease,
+    transform 800ms ease;
 }
 
 /* 初期（閉じてる時） */
