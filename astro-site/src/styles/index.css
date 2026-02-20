@@ -124,6 +124,8 @@ p {
   place-items: start;     /* centerだと長文が窮屈 */
   padding: 18px;
   overflow: auto;         /* 長文はスクロール */
+ -webkit-overflow-scrolling: touch; /* iOSの慣性スクロール */
+  touch-action: pan-y;               /* 縦スクロール許可 */
 }
 
 .flip-text{
