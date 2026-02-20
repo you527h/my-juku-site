@@ -47,7 +47,7 @@ hr {
   height: 3px;
   background: rgb(201,168,44);
   margin: 0 0 10px;
-  width: calc(100% - 30px); /* p の左右margin 15px に合わせる */
+  width: 90vw;
 }
 
 .b {
@@ -219,14 +219,14 @@ p {
   overflow: hidden;
   transform-origin: top;
   transition: 
-    opacity 400ms ease,
-    transform 400ms ease;
+    opacity 4000ms ease,
+    transform 4000ms ease;
 }
 
 /* 初期（閉じてる時） */
 .fold:not([open]) .fold-body{
   opacity: 0;
-  transform: translateY(-15px);
+  transform: translateY(-50px);
 }
 
 /* 開いた時 */
@@ -271,4 +271,4 @@ p {
 /* チェックON（裏が見えてる時）は裏だけ触れる */
 .flip-check:checked + .flip-card .flip-back{
   pointer-events: auto;
-}
+}(
