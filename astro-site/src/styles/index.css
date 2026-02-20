@@ -88,7 +88,7 @@ p {
 }
 
 .course-list {
-  font-sisze: 16px;
+  font-sisz: 16px;
   font-weight: 900;
   display: block;
   margin-top: 16px;
@@ -233,15 +233,6 @@ p {
 .fold[open] .fold-body{
   opacity: 1;
   transform: translateY(0);
-}
-
-/* アニメーション（好みで） */
-.fold-body{
-  animation: foldFade 180ms ease;
-}
-@keyframes foldFade{
-  from{ opacity: 0; transform: translateY(-4px); }
-  to{ opacity: 1; transform: translateY(0); }
 }
 
 
