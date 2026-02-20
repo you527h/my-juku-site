@@ -114,7 +114,7 @@ p {
 .flip-inner{
   position: relative;
   width: 100%;
-  min-height: 320px;        /* ←まず表示させる用 */
+  min-height: 280px;        /* ←まず表示させる用 */
   transform-style: preserve-3d;
   transition: transform 400ms ease;
 }
