@@ -1,0 +1,208 @@
+/* ===== 全体 ===== */
+.info-wrap{
+  width: min(980px, 96vw);
+  margin: 28px auto 70px;
+  font-family: system-ui, -apple-system, "Zen Maru Gothic", sans-serif;
+}
+
+.info-head{ margin-bottom: 14px; }
+
+.info-title{
+  margin: 0;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.info-lead{
+  margin: 6px 0 0;
+  opacity: .85;
+  line-height: 1.7;
+}
+
+/* ===== カード ===== */
+.card{
+  margin-top: 16px;
+  border: 1px solid rgba(0,0,0,.12);
+  border-radius: 14px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.card-head{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 14px 10px;
+  border-bottom: 1px solid rgba(0,0,0,.08);
+}
+
+.card-title{
+  margin: 0;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.chip{
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-weight: 900;
+  font-size: 12px;
+  border: 1px solid rgba(0,0,0,.15);
+  opacity: .9;
+}
+
+/* ===== 内側 ===== */
+.grid-2{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  padding: 14px;
+}
+
+@media (min-width: 820px){
+  .grid-2{ grid-template-columns: 1fr 1fr; }
+}
+
+.subcard{
+  border: 1px solid rgba(0,0,0,.10);
+  border-radius: 12px;
+  padding: 12px;
+  background: #fafafa;
+}
+
+.subcard-wide{
+  margin: 14px;
+}
+
+.sub-title{
+  margin: 0 0 10px;
+  font-size: 15px;
+  font-weight: 900;
+}
+
+/* ===== ステップ ===== */
+.steps{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.step{
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  gap: 10px;
+  align-items: start;
+}
+
+.step-no{
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  font-weight: 900;
+  border: 1px solid rgba(0,0,0,.18);
+  background: #fff;
+}
+
+.step-title{
+  font-weight: 900;
+  line-height: 1.45;
+}
+
+.step-text{
+  margin: 4px 0 0;
+  opacity: .85;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+.steps.compact .step-text{ margin-top: 2px; }
+
+/* ===== 月別スケジュール（tableなし） ===== */
+.month-list{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 8px;
+}
+
+/* 左：4〜7月を縦積み */
+.term-left{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.term-month{
+  display: grid;
+  place-items: center;
+  height: 34px;
+  border-radius: 12px;
+  font-weight: 900;
+  border: 1px solid rgba(0,0,0,.14);
+  background: #f5f5f5;
+}
+
+/* 右：中央に「前期授業」 */
+.term-rightfour{
+  display: grid;
+  place-items: center;  /* 縦横ど真ん中 */
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,.10);
+  background: #f7f7f7;
+  min-height: calc(34px * 4 + 8px * 3); /* 左の高さに合わせる */
+}
+
+.term-right-one{
+  min-height: calc(34px * 1 + 8px * 0); /* 左の高さに合わせる */
+}
+
+.term-right-four{
+  min-height: calc(34px * 4 + 8px * 3); /* 左の高さに合わせる */
+}
+
+.term-right{
+  display: grid;
+  place-items: center;  /* 縦横ど真ん中 */
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,.10);
+  background: #f7f7f7;
+}
+
+.term-text{
+  font-weight: 900;
+  font-size: 18px;
+}
+
+.caption{
+  margin: 10px 2px 0;
+  font-size: 13px;
+  opacity: .85;
+  line-height: 1.6;
+}
+
+/* ===== 個別（補講） ===== */
+.simple-text{
+  margin: 0;
+  padding: 14px;
+  line-height: 1.8;
+}
+
+
+/* ===== 4〜7月を1つのボックスにまとめる ===== */
+.term-item{
+  display: grid;
+  grid-template-columns: 86px 1fr; /* 左の月カラム / 右のテキスト */
+  gap: 12px;
+  padding: 12px;
+  border-radius: 12px;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.08);
+}
+
