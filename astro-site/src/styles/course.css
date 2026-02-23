@@ -2,7 +2,6 @@
 .info-wrap{
   width: min(980px, 96vw);
   margin: 28px auto 70px;
-  font-family: system-ui, -apple-system, "Zen Maru Gothic", sans-serif;
 }
 
 .info-head{ margin-bottom: 14px; }
