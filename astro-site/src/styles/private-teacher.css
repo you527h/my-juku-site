@@ -219,7 +219,7 @@ html{
 .eiken-sum{
   list-style: none;
   cursor: pointer;
-  padding: 16px 16px;
+  padding: 16px;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -244,20 +244,6 @@ html{
   font-weight: 900;
   opacity: .85;
   margin-left: 10px;
-}
-
-/* Make summary two-column: left info + icon */
-.eiken-sum{
-  list-style: none;
-  cursor: pointer;
-  padding: 16px;
-  display: flex;                 /* ← gridやめる */
-  align-items: center;
-  justify-content: space-between;/* ← これで左右分離 */
-}
-
-.eiken-sum::-webkit-details-marker{
-  display: none;
 }
 
 .eiken-sum > span:first-child{
