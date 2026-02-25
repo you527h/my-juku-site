@@ -97,6 +97,7 @@ html{
 .accordion summary::after{
   content: "＋";
   font-weight: 900;
+  margin-left: auto;
 }
 
 .accordion[open] summary::after{
@@ -256,6 +257,7 @@ html{
   font-size: 22px;
   font-weight: 900;
   color: rgb(201,168,44);
+  margin-left: auto;
 }
 
 /* 左側をまとめる */
