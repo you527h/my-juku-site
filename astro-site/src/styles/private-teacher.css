@@ -168,7 +168,7 @@ html{
   margin-top: 60px;
 }
 
-.cta-btn{
+.cta-btn-p{
   padding: 16px 40px;
   border-radius: 40px;
   background: rgb(201,168,44);
@@ -179,7 +179,7 @@ html{
   transition: 0.3s;
 }
 
-.cta-btn:hover{
+.cta-btn-p:hover{
   opacity: .85;
 }
 
