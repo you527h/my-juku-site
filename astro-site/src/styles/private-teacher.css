@@ -220,11 +220,23 @@ html{
   list-style: none;
   cursor: pointer;
   padding: 16px 16px;
+  margin-left: 40px;
   display: flex;
   align-items: center;
   gap: 10px;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
+
+.eiken-sum-jun{
+  list-style: none;
+  cursor: pointer;
+  padding: 16px 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: flex-start;
+}
+
 .eiken-sum::-webkit-details-marker{ display:none; }
 
 /* Left grouping */
