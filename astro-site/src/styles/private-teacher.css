@@ -87,7 +87,7 @@ html{
   font-weight: 900;
   font-size: 17px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .accordion summary::-webkit-details-marker{
