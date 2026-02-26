@@ -126,7 +126,7 @@ html{
 /* モデル */
 .model-wrap{
   width: min(800px, 92vw);
-  margin: 20px 20px;
+  margin: 20px auto;
 }
 
 .model-main{
