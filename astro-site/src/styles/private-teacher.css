@@ -104,6 +104,10 @@ html{
   content: "−";
 }
 
+.subject{
+  display: inline-block;
+}
+
 .accordion-body{
   padding: 18px;
   line-height: 1.8;
