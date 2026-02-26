@@ -1,16 +1,18 @@
-<header class="header">
+<a href="/" class="header">
   <img src="https://raw.githubusercontent.com/you527h/my-juku-site/main/astro-site/public/images/juku-logo.png" alt="logo" />
   <div class="header-combi-text">
     <span class="header-text-sub">家庭教師・個別指導・集団授業</span>
     <span class="header-text-main">プロ講師指導塾</span>
   </div>
-</header>
+</a>
 
 <style>
 .header {
   display: flex;
   align-items: center;
   padding: 3px 10px;
+  text-decoration: none;   /* ←リンクの下線消す */
+  color: inherit;          /* ←文字色継承 */
 }
 
 .header > img {
@@ -24,20 +26,18 @@
   display: flex;
   flex-direction: column;
   line-height: 1.3;
-  margin: 0 0 0 10px;
+  margin-left: 10px;
   font-weight: 100;
 }
 
 .header-text-main{
   font-size: 20px;
   color: #000;
-  display: block;
 }
 
 .header-text-sub{
   margin-left: 3px;
   font-size: 10px;
   color: #000;
-  display: block;
 }
 </style>
