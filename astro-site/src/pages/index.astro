@@ -1,255 +1,200 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import SelectBar from "../components/SelectBar.astro";
-import "../styles/private-teacher.css";
+import "../styles/index.css";
 ---
 
-<Layout title="プロ講師指導塾｜家庭教師">
-<section class="tutor-wrap">
+<Layout title="プロ講師指導塾｜家庭教師・個別指導・集団授業">
+<div class="mppfirst">
+	<img src="https://raw.githubusercontent.com/you527h/my-juku-site/main/astro-site/public/images/slide_02.webp" alt="2枚目のスライド">
+</div>
+<SelectBar />
 
-  <!-- Hero -->
-  <div class="tutor-hero">
-    <h1>家庭教師</h1>
-    
-    <img src="https://raw.githubusercontent.com/you527h/my-juku-site/main/astro-site/public/images/private-teacher.webp">
-    <p>
-      <span class="gothic">1</span>講義<span class="gothic">120</span>分制 ／ <span class="gothic">1</span>講義<span class="gothic">1</span>科目集中指導<br>
-      志望校から逆算する、完全マンツーマン戦略指導
-    </p>
-
-    <div class="target-nav">
-      <a href="#junior">中学生</a>
-      <a href="#high">高校生・浪人生</a>
-      <a href="#adult">大学生・社会人</a>
-    </div>
-  </div>
   
-  <!-- 中学生 -->
-  <section id="junior" class="purpose-block">
-    <h2>中学生</h2>
-
-    <details class="accordion">
-      <summary>高校受験対策</summary>
-      <div class="accordion-body">
-        英語 <span class="gothic">/</span> 数学 <span class="gothic">/</span> 国語 <span class="gothic">/</span> 理科 <span class="gothic">/</span> 社会
-      </div>
-    </details>
-
-    <details class="accordion">
-      <summary>英検対策</summary>
-      <div class="accordion-body">
-        <span class="gothic">3</span>級 <span class="gothic">/</span> 準<span class="gothic">2</span>級 <span class="gothic">/</span> 準<span class="gothic">2</span>級プラス <span class="gothic">/</span> <span class="gothic">2</span>級
-      </div>
-    </details>
-    
-    <details class="accordion">
-      <summary>定期テスト対策</summary>
-      <div class="accordion-body">
-        英語 <span class="gothic">/</span> 数学＋理科 <span class="gothic">/</span> 国語＋社会<br>
-        <span class="text-font-small">※定期テスト対策のみ<span class="gothic">1</span>講義で上記の<span class="gothic">2</span>科目受講可能</span>
-      </div>
-    </details>
-  </section>
-
-
-  <!-- 高校生 -->
-  <section id="high" class="purpose-block">
-    <h2>高校生・浪人生</h2>
-
-    <details class="accordion">
-      <summary>国公立大学対策</summary>
-      <div class="accordion-body">
-        英語 <span class="gothic">/</span> 数学 <span class="gothic">/</span> 物理 <span class="gothic">/</span> 化学 <span class="gothic">/</span> 生物 <span class="gothic">/</span> 国語
-      </div>
-    </details>
-
-    <details class="accordion">
-      <summary>共通テスト対策</summary>
-      <div class="accordion-body">
-        英語 <span class="gothic">/</span> 数学 <span class="gothic">/</span> 情報 <span class="gothic">/</span> 公共 <span class="gothic">/</span> 世界史 <span class="gothic">/</span> 日本史
-      </div>
-    </details>
-    
-    <details class="accordion">
-      <summary>英検対策</summary>
-      <div class="accordion-body">
-        準<span class="gothic">2</span>級 <span class="gothic">/</span> 準<span class="gothic">2</span>級プラス <span class="gothic">/</span> <span class="gothic">2</span>級 <span class="gothic">/</span> 準<span class="gothic">1</span>級 <span class="gothic">/</span> <span class="gothic">1</span>級
-      </div>
-    </details>    
-  </section>
-
-
-  <!-- 社会人 -->
-  <section id="adult" class="purpose-block">
-    <h2>大学生・社会人</h2>
-
-    <details class="accordion">
-      <summary><span class="gothic-light">TOEIC</span>対策</summary>
-      <div class="accordion-body">
-        <span class="gothic">TOEIC L&R 600</span>点以上<br>
-        <span class="gothic">TOEIC L&R 700</span>点以上<br>
-        <span class="gothic">TOEIC L&R 800</span>点以上<br>
-        <span class="gothic">TOEIC L&R 900</span>点以上
-      </div>
-    </details>
-
-    <details class="accordion">
-      <summary>英検対策</summary>
-      <div class="accordion-body">
-          <span class="gothic">2</span>級 <span class="gothic">/</span> 準<span class="gothic">1</span>級 <span class="gothic">/</span> <span class="gothic">1</span>級
-      </div>
-    </details>
-  </section>
-
-  <!-- 受講モデル -->
-<section class="model-wrap">
-
-  <h2 class="model-main">受講モデル</h2>
-
-  <div class="model-block">
-    <h3 class="model-sub">基本方針</h3>
-    <p>
-      ・<span class="gothic">1</span>講義 <span class="gothic">120</span>分制<br>
-      ・<span class="gothic">1</span>講義 <span class="gothic">1</span>科目集中指導
-    </p>
-  </div>
-
-  <div class="model-block">
-    <h3 class="model-sub">回数の目安</h3>
-    <p>
-      週<span class="gothic">1</span>回<span class="gothic">（120</span>分<span class="gothic">） — </span>基礎固め・標準対策<br>
-      週<span class="gothic">2</span>回<span class="gothic">（</span>各<span class="gothic">120</span>分<span class="gothic">） — </span>複数科目／短期強化<br>
-      週<span class="gothic">3</span>回以上<span class="gothic"> — </span>直前期・浪人生<span class="gothic">（</span>要相談<span class="gothic">）</span>
-    </p>
-  </div>
-
-  <div class="model-block">
-    <h3 class="model-sub">受講例</h3>
-    <p>
-      英語<span class="gothic">（1</span>科目<span class="gothic">） → </span>週<span class="gothic">1</span>回<span class="gothic">（120</span>分<span class="gothic">）</span><br>
-      英語<span class="gothic">＋</span>数学<span class="gothic">（2</span>科目<span class="gothic">） → </span>週<span class="gothic">2</span>回<span class="gothic">（</span>各<span class="gothic">120</span>分<span class="gothic">）</span><br>
-      英語<span class="gothic">＋</span>数学<span class="gothic">＋</span>物理<span class="gothic"> → </span>週<span class="gothic">3</span>回<span class="gothic">（</span>各<span class="gothic">120</span>分<span class="gothic">）</span>
-    </p>
-  </div>
-
-  <p class="model-note">
-    <span class="gothic">※</span>体験授業は<span class="gothic">60</span>分でお申し込みいただけます。
-  </p>
-
-</section>
   
-  <section class="chev-wrap">
-  <h2 class="chev-title">体験までの流れ</h2>
+<div class="flip-wrap">
+  <input id="strategyFlip" class="flip-check" type="checkbox" />
 
-  <div class="chev-box">
-    <div class="chev-row">
-      <span class="chev-text">公式<span class="gothic-light">LINE</span>でお問い合わせ</span>
-    </div>
+  <div class="flip-card">
+    <div class="flip-inner">
 
-    <div class="chev-row">
-      <span class="chev-text">
-        体験授業日を決めて、<br>
-        解説が必要な問題を<span class="gothic-light">LINE</span>で送信
-      </span>
-      
-    </div>
+      <div class="flip-face flip-front">
+        <div class="flip-title">戦略で、努力を結果へ</div>
+        <p class="flip-text">努力を結果にする方法を知りたい人は<br>このカードをタップしよう。</p>
 
-    <div class="chev-row">
-      <span class="chev-text">体験授業の料金を授業日までに振込</span>
-    </div>
+        <!-- ここだけ反応させる -->
+        <label class="tap-area" for="strategyFlip">ここをタップ</label>
+      </div>
 
-    <div class="chev-row">
-      <span class="chev-text">体験授業</span>
+      <div class="flip-face flip-back">
+        <div class="card-header">
+          <span class="flip-text">答え</span><span class="flip-title">学習管理</span>
+                  <!-- 戻す用（必要なら） -->
+        </div>
+        <div class="card-center">
+          <label class="tap-area" for="strategyFlip">戻る</label>    
+        </div>
+        <div class="flip-text">
+          まず初めに、「学習管理」とは単なる進度の確認ではありません。<br>
+          <div class="card-margin"><span class="card-gothic">Step1</span>：学ぶべき範囲の全体像を理解する。</div>
+          <div class="card-margin"><span class="card-gothic">Step2</span>：自分の現在の状況を正確に把握する。</div>
+          <div class="card-margin"><span class="card-gothic">Step3</span>：次に取り組むべき内容を明確にする。</div>
+          プロの講師陣が、あなたの学習範囲の全体像と現在の状況を的確に見極めて、あなたと共に学習計画を作ります。そして、その学習計画を確実にやり切ることこそが、努力を結果へと結びつける最短ルートです。
+        </div>
+        </div>
+      </div>
+
     </div>
   </div>
-</section>
+</div>
   
-  <!-- CTA -->
-  <div class="cta-area">
-    <a href="#" class="cta-btn-p"><span class="gothic-light">LINE</span>で学習相談を申し込む</a>
-  </div>
-
+<section class="picture">
+	<img src="https://raw.githubusercontent.com/you527h/my-juku-site/main/astro-site/public/images/slide_03.webp">
 </section>
 
-<section class="eiken-wrap">
-  <h2 class="eiken-title">英検｜級別まとめ</h2>
-  <p class="eiken-lead">タップすると、試験内容が開きます。</p>
-
-  <details class="eiken-item">
-    <summary class="eiken-sum">
-      <span class="eiken-grade"><span class="gothic-light">1</span>級</span>
-      <span class="eiken-tag">約<span class="gothic-light">1,000</span>時間以上の学習が必要</span>
+    <!-- 指導方針 -->
+<section class="A-block">
+  <details class="fold">
+    <summary class="fold-summary">
+      <div class="combi-text">
+        <div class="title-text-main">Teaching Philosophy</div>
+        <div class="title-text-sub">指導方針</div>
+        <hr>
+      </div>
     </summary>
-    <div class="eiken-body">
-      <dl class="eiken-dl">
-        <div class="row"><dt>語彙目安</dt><dd>約<span class="gothic">10,000</span>語以上</dd></div>
-        <div class="row"><dt>一次試験</dt><dd>語彙・読解・英作文<span class="gothic">（</span>ライティング<span class="gothic">）</span></dd></div>
-        <div class="row"><dt>二次試験</dt><dd>面接<span class="gothic">（</span>社会問題に関するスピーチ・質疑応答<span class="gothic">）</span></dd></div>
-        <div class="row"><dt>特徴</dt><dd>専門的テーマ<span class="gothic">・</span>抽象的議論が中心</dd></div>
-      </dl>
+    <div class="fold-body">
+      <p>
+        本塾では<b>学習状況の管理</b>を最も重視しています。<br>
+        受講科目については講師が生徒一人ひとりと相談しながら毎週 <span class="gothic">2</span> 週間分の学習計画を作成します。その計画に基づき進捗状況や理解度を確認し、必要に応じて内容を柔軟に調整することで学習の遅れやムラを防ぎます。<br>
+        <b>学校の授業内容の復習から入試対策</b>と幅広く対応し、基礎事項の定着を大切にしながら応用力・実戦力へと段階的に学力を高めていきます。生徒一人ひとりの学力や目標に合わせ、志望大学合格に向けて講師と生徒が二人三脚で学習を進めていきます。
+      </p>
+      <div class="b">学習管理という選択</div>
+    </div>
+  </detail>
+</section>
+
+    
+    <!-- 指導内容 -->
+<section class="A-block">
+  <details class="fold">
+    <summary class="fold-summary">
+      <div class="combi-text">
+        <div class="title-text-main">Subject Offered</div>
+        <div class="title-text-sub">受講可能科目</div>
+        <hr>
+      </div>
+    </summary>
+    <div class="fold-body">
+		  <p>
+        <span class="column-list">英検・<span class="gothic-light">TOEIC</span>対策講座</span>
+        <span class="subject">「英検対策講座」</span>
+        <span class="subject">「<span class="gothic">TOEIC</span>対策講座」</span>
+        <span class="column-list">大学受験対策科目</span>
+        <span class="subject">「英語」</span>
+        <span class="subject">「数学」</span>
+        <span class="subject">「現代文」</span>
+        <span class="subject">「古文」</span>
+        <span class="subject">「漢文」</span>
+        <span class="subject">「物理」</span>
+        <span class="subject">「化学」</span>
+        <span class="subject">「生物」</span>
+        <span class="subject">「地学」</span>
+        <span class="subject">「世界史」</span>
+        <span class="subject">「日本史」</span>
+        <span class="subject">「公共」</span>
+        <span class="subject">「倫理」</span>
+        <span class="subject">「情報」</span>
+        <span class="column-list">高校受験対策科目</span>
+        <span class="subject">「数学」</span>
+        <span class="subject">「英語」</span>
+        <span class="subject">「国語」</span>
+		  </p>
     </div>
   </details>
+</section>
 
-  <details class="eiken-item">
-    <summary class="eiken-sum">
-      <span class="eiken-grade">準<span class="gothic-light">1</span>級</span>
-      <span class="eiken-tag">約<span class="gothic-light">600</span>時間以上の学習が必要</span>
-    </summary>
-    <div class="eiken-body">
-      <dl class="eiken-dl">
-        <div class="row"><dt>語彙目安</dt><dd>約<span class="gothic">7,500</span>語</dd></div>
-        <div class="row"><dt>一次試験</dt><dd>語彙<span class="gothic">・</span>読解<span class="gothic">・</span>英作文<span class="gothic">（</span>ライティング<span class="gothic">）</span></dd></div>
-        <div class="row"><dt>二次試験</dt><dd>面接<span class="gothic">（</span>意見陳述<span class="gothic">・</span>質疑応答<span class="gothic">）</span></dd></div>
-        <div class="row"><dt>特徴</dt><dd>社会<span class="gothic">・</span>環境<span class="gothic">・</span>教育などのテーマが多い</dd></div>
-      </dl>
+
+    <!-- 指導内容 -->
+<section class="A-block">
+  <details class="fold">
+    <summary class="fold-summary">
+      <div class="combi-text">
+        <div class="title-text-main">Courses Offered</div>
+        <div class="title-text-sub">指導内容</div>
+        <hr>
+      </div>
+    </summary>      
+    <div class="fold-body">
+		  <p>
+        <span class="column-list">英検・<span class="gothic-light">TOEIC</span>対策</span>
+        <span class="gothic">TOEIC</span>・英検対策に精通したプロ講師による講習を行っており、必須英単語の復習からリスニング対策まで幅広いサポートが特長です。<br>
+          大学入試では、<span class="gothic">TOEIC</span>・英検のスコアを提出することで英語試験が免除される大学が増えているため、通常の授業と並行しての受講をおすすめしています。<br>
+          また、大阪府内の公立高校入試では、<b>英検 <span class="gothic-light">2</span> 級</b>を取得している場合、 <b><span class="gothic-light">90</span> 点満点中 <span class="gothic-light">72</span> 点が</b>試験なしで<b>保証</b>され、準 <span class="gothic">1</span> 級以上では満点が保証されます。試験本番の不安を一つでも減らすためにも、中学生のうちから英検 <span class="gothic">2</span> 級以上の取得を強くおすすめしています。
+        
+        <span class="column-list">大学入試対策</span>
+        <span class="course-list">英語</span>
+          •	リスニング<br>
+          聞き取り練習とよく使われるフレーズなどを徹底指導。<br>
+          •	リーディング<br>
+          長文読解・語彙・文法を体系的に強化。
+
+        <span class="course-list">数学</span>
+          •	数学<span class="gothic">ⅠA・ⅡB・ⅢC</span><br>
+          中学内容の復習から最難関大学レベルの応用問題と幅の広い指導が可能。
+
+        <span class="course-list">国語</span>
+          •	現代文<br>
+          論理構造の読み取り方、設問へのアプローチを重視<br>
+          •	古文<br>
+          古文の読み方をゼロからの指導が特徴。<br>
+          •	漢文<br>
+          漢文の基礎から徹底解説で漢文が読めるようになる。
+
+        <span class="course-list">理科</span>
+          •	物理・物理基礎<br>
+          •	化学・化学基礎<br>
+          •	生物・生物基礎<br>
+          •	地学・地学基礎<br>
+          学校で未習の内容についても無理なく理解できるよう第一歩から着実に指導で最短で完成。
+
+        <span class="course-list">社会</span>
+          •	日本史総合<br>
+          • 世界史総合<br>
+          • 地理総合<br>
+          • 公共<br>
+          •	倫理<br>
+          用語暗記に頼らず、流れや背景を意識した学習で得点力が身につく。
+
+        <span class="course-list">情報</span>
+          •	情報
+          共通テストに対応した基礎知識と実践的な問題演習が魅力。
+
+        <span class="column-list">高校入試対策（大阪府）</span>
+          英語・数学の<span class="gothic">A</span>問題・<span class="gothic">B</span>問題・<span class="gothic">C</span>問題のそれぞれの出題傾向を踏まえ、段階的かつ確実な指導を行います。<br>
+          また、近畿圏であればそれぞれの地域に合わせた対策を熟知した講師が指導します。
+		  </p>
     </div>
   </details>
+</section>
 
-  <details class="eiken-item">
-    <summary class="eiken-sum">
-      <span class="eiken-grade"><span class="gothic-light">2</span>級</span>
-      <span class="eiken-tag">約<span class="gothic-light">400</span>時間以上の学習が必要</span>
+    <!-- エリア -->
+<section class="A-block">
+  <details class="fold">
+    <summary class="fold-summary">
+      <div class="combi-text">
+        <div class="title-text-main">Area</div>
+        <div class="title-text-sub">家庭教師指導可能地域</div>
+        <hr>
+      </div>
     </summary>
-    <div class="eiken-body">
-      <dl class="eiken-dl">
-        <div class="row"><dt>目安レベル</dt><dd>高校卒業程度</dd></div>
-        <div class="row"><dt>語彙目安</dt><dd>約<span class="gothic">5,000</span>語</dd></div>
-        <div class="row"><dt>一次試験</dt><dd>語彙<span class="gothic">・</span>読解<span class="gothic">・</span>英作文<span class="gothic">（</span>ライティング<span class="gothic">）</span></dd></div>
-        <div class="row"><dt>二次試験</dt><dd>面接<span class="gothic">（</span>短いスピーチ<span class="gothic">・</span>質疑応答<span class="gothic">）</span></dd></div>
-        <div class="row"><dt>特徴</dt><dd>入試優遇<span class="gothic">・</span>加点対象になりやすい</dd></div>
-      </dl>
+    <div class="fold-body">
+      <p>
+        大阪府全域を中心に、近畿圏の幅広い地域で家庭教師指導に対応しています。<br>
+        主な地域として、大阪府全域・奈良県・京都府・滋賀県・兵庫県・和歌山県です。<br>
+        注 <span class="gothic">）</span> エリアや条件によっては対応可能な場合もございますので、詳細はお気軽にご相談ください。
+      </p>
     </div>
   </details>
-
-  <details class="eiken-item">
-    <summary class="eiken-sum">
-      <span class="eiken-grade">準<span class="gothic-light">2</span>級</span>
-      <span class="eiken-tag">約<span class="gothic-light">300</span>時間以上の学習が必要</span>
-    </summary>
-    <div class="eiken-body">
-      <dl class="eiken-dl">
-        <div class="row"><dt>語彙目安</dt><dd>約<span class="gothic">3,600</span>語</dd></div>
-        <div class="row"><dt>一次試験</dt><dd>語彙<span class="gothic">・</span>読解<span class="gothic">・</span>英作文<span class="gothic">（</span>ライティング<span class="gothic">）</span></dd></div>
-        <div class="row"><dt>二次試験</dt><dd>面接</dd></div>
-        <div class="row"><dt>特徴</dt><dd>基礎文法＋やや長文で実力が出る</dd></div>
-      </dl>
-    </div>
-  </details>
-
-  <details class="eiken-item">
-    <summary class="eiken-sum">
-      <span class="eiken-grade"><span class="gothic-light">3</span>級</span>
-      <span class="eiken-tag">約<span class="gothic-light">100</span>時間以上の学習が必要</span>
-    </summary>
-    <div class="eiken-body">
-      <dl class="eiken-dl">
-        <div class="row"><dt>語彙目安</dt><dd>約<span class="gothic">2,100</span>語</dd></div>
-        <div class="row"><dt>一次試験</dt><dd>語彙・文法・読解・英作文（ライティング）</dd></div>
-        <div class="row"><dt>二次試験</dt><dd>面接</dd></div>
-        <div class="row"><dt>特徴</dt><dd>基礎英語の到達度チェックに最適</dd></div>
-      </dl>
-    </div>
-  </details>
-
 </section>
 </Layout>
+
