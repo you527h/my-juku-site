@@ -8,7 +8,7 @@ html{
 
 .tutor-wrap{
   width: min(1000px, 92vw);
-  margin: 80px auto;
+  margin: 20px auto;
   color: #222;
 }
 
@@ -18,10 +18,17 @@ html{
   margin-bottom: 80px;
 }
 
+.tutor-hero img{
+  margin-left: -3vw;
+  width: 98vw;
+  border-radius: 20px;
+}
+
 .tutor-hero h1{
   font-size: 38px;
   font-weight: 900;
   letter-spacing: 2px;
+  margin: 0;
 }
 
 .tutor-hero p{
@@ -102,10 +109,6 @@ html{
 
 .accordion[open] summary::after{
   content: "−";
-}
-
-.subject{
-  display: inline-block;
 }
 
 .accordion-body{
