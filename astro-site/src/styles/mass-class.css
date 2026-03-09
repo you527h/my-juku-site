@@ -417,6 +417,7 @@ html{ scroll-behavior: smooth; }
   color: rgb(201,168,44);
   border: 1px solid rgba(201,168,44,.45);
   background: rgba(201,168,44,.10);
+  font-family: 'Zen Maru Gothic', sans-serif;
 }
 
 .cur-body{
