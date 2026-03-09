@@ -418,6 +418,7 @@ html{ scroll-behavior: smooth; }
   border: 1px solid rgba(201,168,44,.45);
   background: rgba(201,168,44,.10);
   font-family: 'Zen Maru Gothic', sans-serif;
+  font-weight: 500;
 }
 
 .cur-body{
