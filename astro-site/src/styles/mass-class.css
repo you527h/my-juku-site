@@ -310,6 +310,7 @@ html{ scroll-behavior: smooth; }
 
 .group-badge{
   display: inline-flex;
+  align-items: center;
   justify-content: center;
   height: 34px;
   border-radius: 12px;
